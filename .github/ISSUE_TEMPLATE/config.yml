@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 收录方法与数据规范
+    url: https://github.com/XLi-hub/awsome-reverse-proxy/blob/main/docs/PLAN.md
+    about: 推荐前请先阅读收录范围和审核标准。

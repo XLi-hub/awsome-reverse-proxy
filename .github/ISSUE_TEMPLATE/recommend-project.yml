@@ -1,0 +1,68 @@
+name: 推荐反向代理项目
+description: 推荐一个尚未收录的 GitHub 项目
+title: "[Project]: "
+labels:
+  - candidate
+body:
+  - type: markdown
+    attributes:
+      value: 请先搜索现有候选、正式目录和排除记录，避免重复提交。
+  - type: input
+    id: repository
+    attributes:
+      label: GitHub 仓库
+      description: 使用规范的公开上游 URL。
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: 建议分类
+      options:
+        - 通用反向代理
+        - 负载均衡器
+        - 轻量或嵌入式代理
+        - 代理开发库
+        - 云原生代理数据平面
+        - Kubernetes Ingress Controller
+        - API 网关
+        - 服务网格网关
+        - 反向隧道与内网穿透
+        - 零信任访问入口
+        - 反代管理面板
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: 为什么属于本目录
+      description: 说明反向代理、入口或隧道为何是核心能力，并附官方文档链接。
+    validations:
+      required: true
+  - type: textarea
+    id: strengths
+    attributes:
+      label: 适用场景与特点
+      description: 使用客观描述，不写“最好”“最强”等宣传结论。
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: 已知限制和依赖
+      description: 包括许可证、实验状态、托管服务、商业控制面或外部组件。
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前检查
+      options:
+        - label: 仓库不是归档项目、未修改 Fork 或镜像。
+          required: true
+        - label: 项目不是代理池、订阅转换、破解或账号中转工具。
+          required: true
+        - label: 我已搜索候选、正式目录和排除记录，未发现重复。
+          required: true
+

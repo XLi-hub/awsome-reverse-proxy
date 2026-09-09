@@ -1,0 +1,1196 @@
+# 此文件由 scripts/catalog.py merge 生成，请勿手工编辑。
+- repo: 0xJacky/nginx-ui
+  name: Nginx UI
+  category: proxy-management-ui
+  description_zh: 用于编辑、验证和发布 Nginx 配置，并管理证书、日志和运行状态的跨平台 Web 管理界面。
+  tags:
+  - nginx
+  - webui
+  - configuration
+  - letsencrypt
+  - monitoring
+  why_candidate: 项目直接管理现有 Nginx 实例，包含配置检查、版本记录和证书自动化等运维闭环。
+  source_queries:
+  - topic:nginx topic:webui proxy configuration
+  - Nginx WebUI configuration certificate management
+  status: candidate
+- repo: alibaba/tengine
+  name: Tengine
+  category: general-reverse-proxy
+  description_zh: 源自淘宝、兼容 NGINX 的高性能 Web 服务器与反向代理。
+  tags:
+  - nginx
+  - http
+  - http3
+  - reverse-proxy
+  - load-balancing
+  - health-check
+  why_candidate: 在 NGINX 基础上提供动态配置、主动健康检查和扩展负载均衡等生产能力。
+  source_queries:
+  - nginx compatible reverse proxy archived:false fork:false
+  - high performance web server reverse proxy HTTP/3 archived:false fork:false
+  status: candidate
+- repo: antoniomika/sish
+  name: sish
+  category: reverse-tunnel
+  description_zh: 基于标准 SSH 反向转发提供 HTTP、HTTPS、WebSocket、TCP 和 SNI 隧道的自托管服务。
+  tags:
+  - ssh
+  - http
+  - tcp
+  - websocket
+  - sni
+  why_candidate: 无需专用客户端即可建立多类隧道，并具备域名路由、认证和负载分配等服务端能力。
+  source_queries:
+  - topic:tunnel SSH HTTP TCP ngrok alternative
+  - self-hosted SSH reverse tunnel SNI
+  status: candidate
+- repo: apache/apisix
+  name: Apache APISIX
+  category: api-gateway
+  description_zh: 基于 OpenResty 和 etcd 的动态 API 网关，覆盖七层路由、四层代理、流量治理和插件扩展。
+  tags:
+  - http
+  - https
+  - tcp
+  - udp
+  - grpc
+  - api-management
+  - plugins
+  - kubernetes
+  why_candidate: Apache 顶级项目，反向代理是核心数据平面能力，并提供动态配置、多协议支持和独立 Ingress Controller。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:apache/apisix
+  status: candidate
+- repo: apache/apisix-ingress-controller
+  name: APISIX Ingress Controller
+  category: ingress-controller
+  description_zh: 使用 Gateway API 和 APISIX 自定义资源动态管理 Apache APISIX 数据平面的 Kubernetes 控制器。
+  tags:
+  - http
+  - grpc
+  - ingress
+  - gateway-api
+  - kubernetes
+  - apisix
+  why_candidate: 项目是 APISIX 官方入口控制器，当前设计直接围绕 Gateway API 资源管理 APISIX Gateway。
+  source_queries:
+  - topic:ingress-controller archived:false fork:false
+  - repo:apache/apisix-ingress-controller
+  status: candidate
+- repo: apache/httpd
+  name: Apache HTTP Server
+  category: general-reverse-proxy
+  description_zh: 模块化 HTTP 服务器，可通过 mod_proxy 提供反向代理与负载均衡。
+  tags:
+  - http
+  - https
+  - reverse-proxy
+  - load-balancing
+  - modules
+  - tls
+  why_candidate: 历史成熟、跨平台且模块生态广，反向代理能力覆盖 HTTP、WebSocket、FastCGI 等常见后端。
+  source_queries:
+  - web server reverse proxy mod_proxy archived:false fork:false
+  - topic:http-server reverse-proxy stars:>=1000 archived:false fork:false
+  status: candidate
+- repo: apache/shenyu
+  name: Apache ShenYu
+  category: api-gateway
+  description_zh: Java 原生 API 网关，提供服务代理、协议转换、动态流量控制和可插拔治理能力。
+  tags:
+  - http
+  - grpc
+  - dubbo
+  - websocket
+  - mqtt
+  - protocol-conversion
+  - plugins
+  - java
+  why_candidate: Apache 顶级项目，支持多种微服务协议，数据同步和插件热更新机制适合动态网关场景。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:apache/shenyu
+  status: candidate
+- repo: azukaar/Cosmos-Server
+  name: Cosmos Server
+  category: proxy-management-ui
+  description_zh: 面向自托管服务器的可视化安全网关，集成反向代理、自动 HTTPS、认证和容器管理。
+  tags:
+  - webui
+  - reverse-proxy
+  - sso
+  - docker
+  - tls
+  why_candidate: 反代路由和身份保护是其应用入口核心能力，适合评估一体化家庭服务器网关这一产品形态。
+  source_queries:
+  - topic:reverse-proxy self-hosted server SSO WebUI
+  - home server secure gateway reverse proxy interface
+  status: needs-review
+- repo: bunkerity/bunkerweb
+  name: BunkerWeb
+  category: proxy-management-ui
+  description_zh: 基于 Nginx 的反向代理与 Web 应用防火墙平台，提供 Web 界面、自动配置和多种部署方式。
+  tags:
+  - nginx
+  - waf
+  - webui
+  - security
+  - kubernetes
+  why_candidate: 入口反代与安全策略是核心运行路径，并提供适合单机、容器和 Kubernetes 的集中管理界面。
+  source_queries:
+  - topic:reverse-proxy topic:waf WebUI
+  - Nginx security reverse proxy management UI
+  status: candidate
+- repo: caddyserver/caddy
+  name: Caddy
+  category: general-reverse-proxy
+  description_zh: 默认自动管理 HTTPS 的模块化 Web 服务器与反向代理。
+  tags:
+  - http
+  - https
+  - automatic-https
+  - load-balancing
+  - go
+  - modular
+  why_candidate: 自动证书管理和简洁配置具有代表性，核心模块支持反向代理、健康检查与多种负载均衡策略。
+  source_queries:
+  - topic:reverse-proxy stars:>=1000 archived:false fork:false
+  - automatic HTTPS reverse proxy language:Go archived:false fork:false
+  status: candidate
+- repo: cilium/cilium
+  name: Cilium
+  category: service-mesh-gateway
+  description_zh: 基于 eBPF 的 Kubernetes 网络与安全平台，集成 Envoy 提供 Ingress、Gateway API 和服务网格七层处理。
+  tags:
+  - ebpf
+  - envoy
+  - ingress
+  - egress
+  - gateway-api
+  - service-mesh
+  - kubernetes
+  why_candidate: 项目在同一网络数据面中实现入口网关、服务网格和策略能力，是非传统 Sidecar 路线的重要候选。
+  source_queries:
+  - topic:service-mesh archived:false fork:false gateway-api
+  - repo:cilium/cilium
+  status: needs-review
+- repo: cloudflare/cloudflared
+  name: cloudflared
+  category: reverse-tunnel
+  description_zh: Cloudflare Tunnel 的开源连接器，通过出站连接将私有服务接入 Cloudflare 网络。
+  tags:
+  - http
+  - tcp
+  - quic
+  - cloudflare
+  - outbound-only
+  why_candidate: 它是 Cloudflare Tunnel 的官方客户端，代表由托管边缘网络承载入口、源站无需开放入站端口的方案。
+  source_queries:
+  - topic:cloudflare-tunnel connector GitHub
+  - Cloudflare Tunnel client expose private service
+  status: needs-review
+- repo: cloudflare/pingora
+  name: Pingora
+  category: proxy-library
+  description_zh: 用于构建高性能、可靠且可编程网络服务的 Rust 代理框架。
+  tags:
+  - rust
+  - http
+  - http2
+  - grpc
+  - websocket
+  - load-balancing
+  - framework
+  why_candidate: 由 Cloudflare 开源并用于其大规模流量基础设施，提供代理、负载均衡、故障转移和可观测性组件。
+  source_queries:
+  - proxy framework language:Rust archived:false fork:false
+  - programmable HTTP proxy load balancing Rust archived:false fork:false
+  status: candidate
+- repo: dotnet/yarp
+  name: YARP
+  category: proxy-library
+  description_zh: 基于 ASP.NET Core 构建可定制高性能 HTTP 反向代理的工具包。
+  tags:
+  - dotnet
+  - aspnet-core
+  - http
+  - reverse-proxy
+  - load-balancing
+  - library
+  why_candidate: 由 .NET 团队维护，提供配置 API、可扩展处理管线和项目模板，适合嵌入业务应用。
+  source_queries:
+  - reverse proxy toolkit language:C# archived:false fork:false
+  - ASP.NET Core high performance reverse proxy archived:false fork:false
+  status: candidate
+- repo: easegress-io/easegress
+  name: Easegress
+  category: api-gateway
+  description_zh: Go 编写的云原生流量编排系统，通过可组合管道提供反向代理、API 治理与韧性策略。
+  tags:
+  - http
+  - http3
+  - mqtt
+  - traffic-orchestration
+  - service-discovery
+  - wasm
+  - kubernetes
+  why_candidate: 项目以反向代理和流量管道为核心，覆盖服务发现、灰度发布、可观测性和 Kubernetes 集成。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:easegress-io/easegress
+  status: candidate
+- repo: ekzhang/bore
+  name: bore
+  category: reverse-tunnel
+  description_zh: 用 Rust 编写的简洁 TCP 隧道，可将本地端口经自托管远端服务器公开。
+  tags:
+  - tcp
+  - rust
+  - self-hosted
+  - nat-traversal
+  why_candidate: 项目范围小而清晰，客户端与服务端部署直接，适合作为纯 TCP 隧道的轻量候选。
+  source_queries:
+  - topic:tunnel language:Rust self-hosted localhost
+  - simple TCP tunnel ngrok alternative self hosted
+  status: candidate
+- repo: emissary-ingress/emissary
+  name: Emissary-ingress
+  category: api-gateway
+  description_zh: 基于 Envoy 的 Kubernetes 原生七层负载均衡器与 API 网关，使用 CRD 管理入口流量。
+  tags:
+  - http
+  - grpc
+  - envoy
+  - ingress
+  - kubernetes
+  - crd
+  - rate-limiting
+  why_candidate: 它将 Kubernetes 入口与 API 网关策略结合，支持渐进式交付、限流和服务网格集成。
+  source_queries:
+  - kubernetes native api gateway envoy archived:false fork:false
+  - repo:emissary-ingress/emissary
+  status: candidate
+- repo: envoyproxy/ai-gateway
+  name: Envoy AI Gateway
+  category: api-gateway
+  description_zh: 构建在 Envoy Gateway 之上的生成式 AI 流量网关，提供统一后端、凭据策略、路由和令牌级治理。
+  tags:
+  - http
+  - envoy
+  - gateway-api
+  - kubernetes
+  - ai-gateway
+  - rate-limiting
+  - observability
+  why_candidate: 项目把模型服务反向代理和治理作为明确边界，并复用成熟的 Envoy Gateway 控制面与数据面。
+  source_queries:
+  - topic:api-gateway archived:false fork:false ai-gateway
+  - repo:envoyproxy/ai-gateway
+  status: candidate
+- repo: envoyproxy/envoy
+  name: Envoy Proxy
+  category: cloud-native-proxy
+  description_zh: 面向云原生服务的高性能四层与七层代理，提供动态 xDS 配置、服务发现、负载均衡和可观测性。
+  tags:
+  - http
+  - tcp
+  - udp
+  - grpc
+  - xds
+  - load-balancing
+  - service-mesh
+  - kubernetes
+  why_candidate: Envoy 是多种 Ingress、Gateway API 和服务网格项目的数据平面，仓库本身也可独立作为边缘代理运行。
+  source_queries:
+  - cloud native edge proxy service mesh archived:false fork:false
+  - repo:envoyproxy/envoy
+  status: candidate
+- repo: envoyproxy/gateway
+  name: Envoy Gateway
+  category: ingress-controller
+  description_zh: 管理 Envoy Proxy 的应用网关，支持以 Kubernetes Gateway API 配置入口流量和策略。
+  tags:
+  - http
+  - grpc
+  - envoy
+  - gateway-api
+  - kubernetes
+  - xds
+  why_candidate: 它是 Envoy 官方面向 Gateway API 的控制平面，避免用户直接维护底层 xDS 配置。
+  source_queries:
+  - gateway api implementation envoy archived:false fork:false
+  - repo:envoyproxy/gateway
+  status: candidate
+- repo: erebe/wstunnel
+  name: wstunnel
+  category: reverse-tunnel
+  description_zh: 以 WebSocket 或 HTTP/2 为传输层的 TCP、UDP 和 Unix Socket 隧道工具。
+  tags:
+  - websocket
+  - http2
+  - tcp
+  - udp
+  - mtls
+  why_candidate: 同时覆盖静态与动态反向隧道，并提供 TLS、mTLS、代理协议和静态二进制发布。
+  source_queries:
+  - topic:reverse-tunnel websocket http2 language:Rust
+  - WebSocket HTTP2 reverse TCP UDP tunnel
+  status: candidate
+- repo: exposedev/expose
+  name: Expose
+  category: reverse-tunnel
+  description_zh: 使用 PHP 构建的开源 HTTP 隧道服务，支持自托管服务端和本地应用公开。
+  tags:
+  - http
+  - php
+  - self-hosted
+  - development
+  - tunnel-server
+  why_candidate: 同时提供客户端与自托管服务端实现，并以完整应用形式覆盖隧道管理和开发分享场景。
+  source_queries:
+  - topic:tunnel-server PHP self-hosted ngrok alternative
+  - open source tunnel application expose localhost
+  status: candidate
+- repo: fabiolb/fabio
+  name: fabio
+  category: load-balancer
+  description_zh: 通过 Consul 服务发现自动配置的 HTTP(S) 与 TCP 负载均衡路由器。
+  tags:
+  - go
+  - consul
+  - service-discovery
+  - http
+  - tcp
+  - load-balancing
+  why_candidate: 以零配置式 Consul 集成为核心，能随健康服务变化实时更新路由，单文件部署简单。
+  source_queries:
+  - Consul load balancer reverse proxy archived:false fork:false
+  - zero config HTTP TCP router Consul language:Go archived:false fork:false
+  status: candidate
+- repo: facebookincubator/katran
+  name: Katran
+  category: load-balancer
+  description_zh: 基于 Linux eBPF/XDP 的高性能 Layer 4 负载均衡器。
+  tags:
+  - ebpf
+  - xdp
+  - layer4
+  - load-balancing
+  - linux
+  - high-performance
+  why_candidate: 展示并提供大规模部署使用的 eBPF/XDP 数据平面，适合研究高吞吐网络负载均衡。
+  source_queries:
+  - eBPF XDP layer 4 load balancer archived:false fork:false
+  - topic:load-balancer topic:ebpf archived:false fork:false
+  status: candidate
+- repo: fatedier/frp
+  name: frp
+  category: reverse-tunnel
+  description_zh: 面向 NAT 与防火墙后服务暴露的客户端/服务端反向代理与内网穿透工具。
+  tags:
+  - tcp
+  - udp
+  - http
+  - https
+  - nat-traversal
+  why_candidate: 反向代理是项目核心用途，协议覆盖面和部署文档较完整，适合作为通用内网穿透基准候选。
+  source_queries:
+  - topic:reverse-proxy topic:nat-traversal archived:false fork:false
+  - '"reverse proxy" "behind a NAT" in:description'
+  status: candidate
+- repo: flomesh-io/pipy
+  name: Pipy
+  category: cloud-native-proxy
+  description_zh: 面向云、边缘和物联网的可编程网络代理，通过组合过滤器实现反向代理、协议处理与流量治理。
+  tags:
+  - http
+  - tcp
+  - udp
+  - mqtt
+  - programmable-proxy
+  - edge
+  - service-mesh
+  why_candidate: 项目将可编程代理作为核心抽象，可用于入口、出口、Sidecar、API 网关和负载均衡等多种数据平面角色。
+  source_queries:
+  - cloud native programmable proxy archived:false fork:false
+  - repo:flomesh-io/pipy
+  status: needs-review
+- repo: fosrl/pangolin
+  name: Pangolin
+  category: zero-trust-access
+  description_zh: 将隧道反向代理、私有网络连接和身份访问控制集成在一起的自托管访问平台。
+  tags:
+  - identity-aware-proxy
+  - wireguard
+  - sso
+  - tcp
+  - udp
+  why_candidate: 同一平台同时覆盖无需开放端口的资源接入、浏览器访问、身份认证和按资源授权。
+  source_queries:
+  - topic:tunneled-reverse-proxy identity access self-hosted
+  - Pangolin reverse proxy VPN access control
+  status: needs-review
+- repo: go-gost/gost
+  name: GOST
+  category: reverse-tunnel
+  description_zh: 支持多种传输协议、转发链、反向代理和 TCP/UDP 内网穿透的通用隧道工具。
+  tags:
+  - tcp
+  - udp
+  - websocket
+  - quic
+  - reverse-proxy
+  why_candidate: 反向隧道是官方列出的主要工作模式之一，且具备多传输协议、路由控制和动态配置能力。
+  source_queries:
+  - topic:reverse-proxy topic:tunnel language:Go
+  - GOST reverse proxy tunnel TCP UDP
+  status: candidate
+- repo: google/seesaw
+  name: Seesaw
+  category: load-balancer
+  description_zh: 基于 Linux Virtual Server 的高可用负载均衡平台。
+  tags:
+  - lvs
+  - ipvs
+  - layer4
+  - anycast
+  - dsr
+  - high-availability
+  - go
+  why_candidate: 覆盖 Anycast、DSR、多 VLAN 与双节点高可用，是传统数据中心 Layer 4 均衡架构的代表实现。
+  source_queries:
+  - LVS load balancing platform archived:false fork:false
+  - Linux Virtual Server high availability load balancer archived:false fork:false
+  status: candidate
+- repo: gravitational/teleport
+  name: Teleport
+  category: zero-trust-access
+  description_zh: 为服务器、Kubernetes、数据库、桌面和内部 Web 应用提供统一身份访问代理与审计的平台。
+  tags:
+  - identity-aware-proxy
+  - ssh
+  - kubernetes
+  - database
+  - audit
+  why_candidate: 内置反向隧道可连接防火墙后的资源，并将短期凭证、细粒度权限与会话审计结合在统一入口。
+  source_queries:
+  - topic:zero-trust infrastructure access reverse tunnel
+  - identity aware access proxy SSH Kubernetes database
+  status: needs-review
+- repo: gravitee-io/gravitee-api-management
+  name: Gravitee API Management
+  category: api-gateway
+  description_zh: 包含网关、管理 API 和开发者门户的 API 管理平台，支持同步 API 与事件驱动 API。
+  tags:
+  - http
+  - api-management
+  - event-driven
+  - policies
+  - developer-portal
+  - kubernetes
+  why_candidate: 仓库提供完整的开源 API 管理实现，网关运行时和策略执行是平台的核心组成部分。
+  source_queries:
+  - api gateway in:name,description archived:false fork:false
+  - repo:gravitee-io/gravitee-api-management
+  status: candidate
+- repo: h2o/h2o
+  name: H2O
+  category: general-reverse-proxy
+  description_zh: 针对 HTTP/1、HTTP/2 与 HTTP/3 优化的 Web 服务器和反向代理。
+  tags:
+  - http1
+  - http2
+  - http3
+  - quic
+  - reverse-proxy
+  - tls
+  why_candidate: 聚焦现代 HTTP 协议与低延迟实现，可作为独立服务器或面向应用后端的反向代理。
+  source_queries:
+  - HTTP/2 HTTP/3 reverse proxy archived:false fork:false
+  - optimized HTTP server proxy QUIC archived:false fork:false
+  status: candidate
+- repo: haproxy/haproxy
+  name: HAProxy
+  category: load-balancer
+  description_zh: 面向 TCP 与 HTTP 应用的高可用反向代理和负载均衡器。
+  tags:
+  - http
+  - tcp
+  - load-balancing
+  - high-availability
+  - tls
+  - proxy-protocol
+  why_candidate: 长期用于高并发生产环境，具备健康检查、流量调度、TLS 终止和运行时管理能力。
+  source_queries:
+  - topic:load-balancer stars:>=1000 archived:false fork:false
+  - '"reverse proxy" "TCP" "HTTP" load balancer archived:false fork:false'
+  status: needs-review
+- repo: haproxytech/kubernetes-ingress
+  name: HAProxy Kubernetes Ingress Controller
+  category: ingress-controller
+  description_zh: HAProxy Technologies 维护的 Kubernetes 入口控制器，以 HAProxy 处理集群外部到服务的流量。
+  tags:
+  - http
+  - https
+  - tcp
+  - tls
+  - haproxy
+  - ingress
+  - kubernetes
+  why_candidate: 项目由 HAProxy 官方团队维护，提供镜像、Helm Chart 和与 HAProxy 能力对应的入口配置。
+  source_queries:
+  - topic:ingress-controller archived:false fork:false
+  - repo:haproxytech/kubernetes-ingress
+  status: candidate
+- repo: higress-group/higress
+  name: Higress
+  category: api-gateway
+  description_zh: 基于 Envoy 和 Istio 技术栈的云原生 API 与 AI 网关，支持 Kubernetes 服务发现和 Wasm 插件。
+  tags:
+  - http
+  - grpc
+  - envoy
+  - istio
+  - wasm
+  - kubernetes
+  - ai-gateway
+  why_candidate: 项目同时覆盖 Kubernetes 入口、API 治理和 AI 流量，数据平面与控制平面边界清晰。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:higress-group/higress
+  status: candidate
+- repo: http-party/node-http-proxy
+  name: node-http-proxy
+  category: proxy-library
+  description_zh: 支持 HTTP(S) 与 WebSocket 的 Node.js 可编程代理库。
+  tags:
+  - nodejs
+  - javascript
+  - http
+  - https
+  - websocket
+  - reverse-proxy
+  - library
+  why_candidate: API 聚焦代理请求和连接升级，长期作为 Node.js 生态中构建反向代理与负载均衡器的基础库。
+  source_queries:
+  - HTTP proxy library Node.js WebSocket archived:false fork:false
+  - reverse proxy library language:JavaScript stars:>=1000 archived:false fork:false
+  status: needs-review
+- repo: inetaf/tcpproxy
+  name: tcpproxy
+  category: lightweight-proxy
+  description_zh: 可按静态规则、HTTP Host 与 TLS SNI 路由连接的 Go TCP 代理。
+  tags:
+  - go
+  - tcp
+  - sni
+  - tls
+  - host-routing
+  - library
+  - single-binary
+  why_candidate: 同时提供库和命令行工具，以较小代码面实现常用的 TCP、Host 与 SNI 分流。
+  source_queries:
+  - TCP proxy SNI Host routing language:Go archived:false fork:false
+  - lightweight TCP reverse proxy library Go archived:false fork:false
+  status: candidate
+- repo: istio/istio
+  name: Istio
+  category: service-mesh-gateway
+  description_zh: 基于 Envoy 的服务网格控制平面，通过入口、出口和跨网络网关统一执行路由、安全与遥测策略。
+  tags:
+  - http
+  - tcp
+  - grpc
+  - envoy
+  - ingress-gateway
+  - egress-gateway
+  - gateway-api
+  - kubernetes
+  why_candidate: 项目包含正式的网关部署与流量管理能力，覆盖网格南北向、东西向及多集群入口场景。
+  source_queries:
+  - topic:service-mesh archived:false fork:false gateway
+  - repo:istio/istio
+  status: needs-review
+- repo: jcmoraisjr/haproxy-ingress
+  name: HAProxy Ingress
+  category: ingress-controller
+  description_zh: 社区维护的 HAProxy Kubernetes Ingress Controller，提供注解、ConfigMap 和自定义资源驱动的路由配置。
+  tags:
+  - http
+  - https
+  - tcp
+  - tls
+  - haproxy
+  - ingress
+  - kubernetes
+  why_candidate: 它是区别于厂商控制器的成熟 HAProxy 入口实现，具备独立代码、发布和较完整的配置文档。
+  source_queries:
+  - topic:ingress-controller archived:false fork:false
+  - repo:jcmoraisjr/haproxy-ingress
+  status: candidate
+- repo: jpillora/chisel
+  name: Chisel
+  category: reverse-tunnel
+  description_zh: 通过 HTTP 传输并使用 SSH 加密的单文件 TCP/UDP 隧道，支持反向端口转发。
+  tags:
+  - tcp
+  - udp
+  - http
+  - ssh
+  - reverse-port-forwarding
+  why_candidate: 客户端和服务端共用单一可执行文件，明确支持反向转发、多端点复用及自动重连。
+  source_queries:
+  - topic:tunnel reverse-port-forwarding http ssh
+  - TCP UDP tunnel over HTTP reverse forwarding
+  status: candidate
+- repo: kgateway-dev/kgateway
+  name: kgateway
+  category: api-gateway
+  description_zh: 基于 Envoy、以 Kubernetes Gateway API 配置的云原生 API 网关控制平面。
+  tags:
+  - http
+  - grpc
+  - envoy
+  - gateway-api
+  - kubernetes
+  - api-management
+  why_candidate: 项目是原 Gloo 开源网关的后继仓库，并以标准 Gateway API 和 Envoy 数据平面作为当前维护方向。
+  source_queries:
+  - gateway api implementation envoy archived:false fork:false
+  - repo:kgateway-dev/kgateway
+  status: needs-review
+- repo: Kong/kong
+  name: Kong Gateway
+  category: api-gateway
+  description_zh: 基于 OpenResty 的 API、AI 与 MCP 网关，提供动态路由、负载均衡、鉴权和插件扩展。
+  tags:
+  - http
+  - https
+  - grpc
+  - api-management
+  - plugins
+  - kubernetes
+  - ai-gateway
+  why_candidate: 项目将反向代理与 API 管理作为核心能力，并拥有独立数据平面、声明式配置和官方 Kubernetes 控制器。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:Kong/kong
+  status: candidate
+- repo: Kong/kubernetes-ingress-controller
+  name: Kong Ingress Controller
+  category: ingress-controller
+  description_zh: 将 Kubernetes Ingress、Gateway API 和 Kong CRD 转换为 Kong Gateway 配置的控制器。
+  tags:
+  - http
+  - grpc
+  - tcp
+  - udp
+  - ingress
+  - gateway-api
+  - kubernetes
+  - kong
+  why_candidate: 控制器覆盖多协议 Gateway API 与 Kong 插件配置；其新功能向 Kong Operator 迁移，仍值得在审核阶段比较维护路线。
+  source_queries:
+  - topic:ingress-controller archived:false fork:false
+  - repo:Kong/kubernetes-ingress-controller
+  status: needs-review
+- repo: krakend/krakend-ce
+  name: KrakenD Community Edition
+  category: api-gateway
+  description_zh: Go 编写的无状态声明式 API 网关，侧重请求聚合、转换、路由和中间件组合。
+  tags:
+  - http
+  - api-aggregation
+  - stateless
+  - declarative-config
+  - middleware
+  - golang
+  why_candidate: 无状态网关模型与常见动态控制平面项目形成差异，反向代理和 API 聚合均属于其核心用途。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:krakend/krakend-ce
+  status: candidate
+- repo: kumahq/kuma
+  name: Kuma
+  category: service-mesh-gateway
+  description_zh: 基于 Envoy 的多区域服务网格，支持 Kubernetes、虚拟机和裸机环境中的入口及区域间网关。
+  tags:
+  - http
+  - tcp
+  - envoy
+  - ingress-gateway
+  - zone-gateway
+  - multi-cluster
+  - kubernetes
+  why_candidate: 项目以跨平台、多区域网格为主要定位，并提供内置或委托网关模式处理网格边界流量。
+  source_queries:
+  - topic:service-mesh archived:false fork:false gateway
+  - repo:kumahq/kuma
+  status: needs-review
+- repo: localtunnel/localtunnel
+  name: localtunnel
+  category: reverse-tunnel
+  description_zh: 面向开发测试与 Webhook 调试的本地 HTTP 服务公开工具，支持连接自建隧道服务端。
+  tags:
+  - http
+  - nodejs
+  - development
+  - webhook
+  - self-hosted
+  why_candidate: 使用方式简单且生态成熟，是开发场景 HTTP 隧道的代表性实现，客户端支持自定义服务端。
+  source_queries:
+  - topic:localtunnel localhost public URL
+  - self-hosted HTTP tunnel webhook development
+  status: needs-review
+- repo: loxilb-io/loxilb
+  name: LoxiLB
+  category: load-balancer
+  description_zh: 面向云原生与边缘场景的 eBPF 云原生负载均衡器。
+  tags:
+  - ebpf
+  - layer4
+  - kubernetes
+  - nat
+  - load-balancing
+  - observability
+  why_candidate: 结合 eBPF 数据平面、Kubernetes 集成和多种网络服务能力，适合软件定义的 Layer 4 均衡场景。
+  source_queries:
+  - cloud native eBPF load balancer archived:false fork:false
+  - topic:load-balancer kubernetes eBPF archived:false fork:false
+  status: candidate
+- repo: mholt/caddy-l4
+  name: Project Conncept (caddy-l4)
+  category: lightweight-proxy
+  description_zh: 为 Caddy 提供 TCP 与 UDP 路由和代理能力的 Layer 4 应用。
+  tags:
+  - caddy
+  - tcp
+  - udp
+  - tls
+  - sni
+  - layer4
+  - plugin
+  why_candidate: 可按协议、TLS SNI 等连接属性组合匹配与处理，但项目明确标注仍在开发并可能有破坏性变更。
+  source_queries:
+  - Caddy layer 4 TCP UDP proxy archived:false fork:false
+  - SNI TCP router Caddy archived:false fork:false
+  status: needs-review
+- repo: mosn/mosn
+  name: MOSN
+  category: cloud-native-proxy
+  description_zh: Go 编写的模块化云原生网络代理，可用作四层与七层负载均衡器、服务网格数据平面或入口网关。
+  tags:
+  - http
+  - tcp
+  - udp
+  - tls
+  - service-mesh
+  - ingress
+  - api-gateway
+  - wasm
+  why_candidate: 项目同时提供独立代理和 Istio 集成能力，多协议及扩展机制使其适合云原生边缘数据平面评估。
+  source_queries:
+  - cloud native network proxy service mesh archived:false fork:false
+  - repo:mosn/mosn
+  status: candidate
+- repo: mwitkow/grpc-proxy
+  name: grpc-proxy
+  category: proxy-library
+  description_zh: 支持透明转发和自定义路由的 Go gRPC 反向代理库。
+  tags:
+  - go
+  - grpc
+  - http2
+  - reverse-proxy
+  - routing
+  - library
+  why_candidate: 针对 gRPC 方法提供低开销透明代理和可插拔路由，补足通用 HTTP 代理难以直接覆盖的 gRPC 场景。
+  source_queries:
+  - gRPC reverse proxy language:Go archived:false fork:false
+  - transparent gRPC proxy routing archived:false fork:false
+  status: candidate
+- repo: netbirdio/netbird
+  name: NetBird
+  category: zero-trust-access
+  description_zh: 基于 WireGuard 的自托管覆盖网络，将设备连接、身份登录和细粒度网络访问策略统一管理。
+  tags:
+  - wireguard
+  - overlay-network
+  - sso
+  - access-control
+  - self-hosted
+  why_candidate: 项目面向无需开放端口的私有资源访问，提供集中策略、路由节点和中继以覆盖复杂网络环境。
+  source_queries:
+  - topic:zero-trust WireGuard self-hosted access control
+  - private network access without opening ports SSO
+  status: needs-review
+- repo: nginx-proxy/nginx-proxy
+  name: nginx-proxy
+  category: lightweight-proxy
+  description_zh: 根据 Docker 容器元数据自动生成配置的 NGINX 反向代理。
+  tags:
+  - nginx
+  - docker
+  - service-discovery
+  - automatic-configuration
+  - http
+  - tls
+  why_candidate: 为单机 Docker 场景提供成熟的自动发现与反向代理流程，使用门槛较低。
+  source_queries:
+  - automated nginx reverse proxy Docker archived:false fork:false
+  - topic:reverse-proxy topic:docker stars:>=1000 archived:false fork:false
+  status: candidate
+- repo: nginx/kubernetes-ingress
+  name: NGINX Ingress Controller
+  category: ingress-controller
+  description_zh: NGINX 官方维护的 Kubernetes Ingress Controller，支持 NGINX 开源版和 NGINX Plus 数据平面。
+  tags:
+  - http
+  - https
+  - tls
+  - nginx
+  - ingress
+  - gateway-api
+  - kubernetes
+  why_candidate: 官方仓库持续提供版本、镜像、Helm 与配置文档，并覆盖标准 Ingress 及扩展入口能力。
+  source_queries:
+  - topic:ingress-controller archived:false fork:false
+  - repo:nginx/kubernetes-ingress
+  status: candidate
+- repo: nginx/nginx
+  name: NGINX
+  category: general-reverse-proxy
+  description_zh: 高性能 Web 服务器、反向代理、负载均衡器与内容缓存。
+  tags:
+  - http
+  - https
+  - tcp
+  - udp
+  - load-balancing
+  - caching
+  - tls
+  why_candidate: 官方开源仓库；功能成熟、协议覆盖广，并拥有长期生产实践与完善文档。
+  source_queries:
+  - topic:reverse-proxy stars:>=1000 archived:false fork:false
+  - '"reverse proxy" "load balancer" in:name,description,readme archived:false fork:false'
+  status: candidate
+- repo: NginxProxyManager/nginx-proxy-manager
+  name: Nginx Proxy Manager
+  category: proxy-management-ui
+  description_zh: 通过 Web 界面管理 Nginx 代理主机、重定向、TCP/UDP 流和 TLS 证书的容器化工具。
+  tags:
+  - nginx
+  - webui
+  - letsencrypt
+  - docker
+  - tcp
+  why_candidate: 功能围绕反代主机和证书生命周期展开，安装与日常管理面向自托管用户，分类相关性直接。
+  source_queries:
+  - topic:proxy-manager nginx WebUI self-hosted
+  - Nginx reverse proxy management interface certificates
+  status: candidate
+- repo: oauth2-proxy/oauth2-proxy
+  name: OAuth2 Proxy
+  category: zero-trust-access
+  description_zh: 在上游应用前通过 OAuth 2.0 或 OpenID Connect 身份提供商执行认证的反向代理。
+  tags:
+  - oauth2
+  - oidc
+  - sso
+  - forward-auth
+  - http
+  why_candidate: 它可独立代理受保护上游，也可作为 Nginx 等网关的外部认证组件，是身份入口的代表性基础组件。
+  source_queries:
+  - topic:oauth2-proxy reverse proxy authentication
+  - OIDC authentication proxy upstream applications
+  status: candidate
+- repo: openresty/openresty
+  name: OpenResty
+  category: general-reverse-proxy
+  description_zh: 基于 NGINX 与 LuaJIT 的可脚本化高性能 Web 平台。
+  tags:
+  - nginx
+  - lua
+  - luajit
+  - http
+  - reverse-proxy
+  - programmable
+  why_candidate: 将成熟的 NGINX 代理能力与 Lua 扩展结合，适合实现定制路由、鉴权和流量处理逻辑。
+  source_queries:
+  - nginx LuaJIT reverse proxy archived:false fork:false
+  - programmable reverse proxy Lua stars:>=1000 archived:false fork:false
+  status: needs-review
+- repo: openziti/ziti
+  name: OpenZiti
+  category: zero-trust-access
+  description_zh: 以加密身份和服务级策略构建覆盖网络的零信任平台，可通过隧道器接入既有私有服务。
+  tags:
+  - zero-trust
+  - overlay-network
+  - identity
+  - mtls
+  - self-hosted
+  why_candidate: 项目提供完整可自托管控制面与数据面，支持让服务保持无公网监听并按身份授权访问。
+  source_queries:
+  - topic:zero-trust programmable network private service access
+  - OpenZiti tunneler dark services self hosted
+  status: needs-review
+- repo: openziti/zrok
+  name: zrok
+  category: reverse-tunnel
+  description_zh: 基于 OpenZiti 的安全资源分享与隧道工具，可公开或私密共享 Web、TCP、UDP 和文件资源。
+  tags:
+  - http
+  - tcp
+  - udp
+  - openziti
+  - self-hosted
+  why_candidate: 兼顾临时公开分享、私有访问和完整自托管，并将零信任覆盖网络用于穿越 NAT 与防火墙。
+  source_queries:
+  - topic:tunneling OpenZiti public private sharing
+  - self-hosted secure internet sharing NAT firewall
+  status: candidate
+- repo: pomerium/pomerium
+  name: Pomerium
+  category: zero-trust-access
+  description_zh: 面向内部 Web 应用和服务的身份与上下文感知反向代理，可按策略验证每次访问。
+  tags:
+  - identity-aware-proxy
+  - oidc
+  - policy
+  - http
+  - beyondcorp
+  why_candidate: 项目以身份感知访问代理为核心，提供客户端无感的内部应用入口和细粒度策略控制。
+  source_queries:
+  - topic:identity-aware-proxy topic:zero-trust
+  - context aware reverse proxy internal applications
+  status: candidate
+- repo: projectcontour/contour
+  name: Contour
+  category: ingress-controller
+  description_zh: 使用 Envoy 作为数据平面的 Kubernetes 入口控制器，支持 Ingress、HTTPProxy CRD 和 Gateway API。
+  tags:
+  - http
+  - https
+  - envoy
+  - ingress
+  - gateway-api
+  - kubernetes
+  - cncf
+  why_candidate: 项目以动态入口配置为核心，同时提供标准 API 与更丰富的 HTTPProxy 配置模型。
+  source_queries:
+  - topic:ingress-controller archived:false fork:false
+  - repo:projectcontour/contour
+  status: candidate
+- repo: rathole-org/rathole
+  name: rathole
+  category: reverse-tunnel
+  description_zh: 使用 Rust 实现的轻量反向隧道，面向将 NAT 后的 TCP 服务映射到公网服务器。
+  tags:
+  - tcp
+  - tls
+  - noise
+  - rust
+  - nat-traversal
+  why_candidate: 项目聚焦反向端口转发，提供加密、热重载和小体积部署能力，定位与本分类高度一致。
+  source_queries:
+  - topic:reverse-tunnel language:Rust archived:false fork:false
+  - frp alternative NAT traversal reverse proxy
+  status: candidate
+- repo: sozu-proxy/sozu
+  name: Sōzu
+  category: lightweight-proxy
+  description_zh: 使用 Rust 构建、支持运行时热配置的轻量反向代理。
+  tags:
+  - rust
+  - http
+  - http2
+  - tcp
+  - udp
+  - tls
+  - hot-reload
+  why_candidate: 强调内存安全、不中断升级和运行时配置，覆盖 HTTP、TCP、UDP 与 TLS 代理。
+  source_queries:
+  - topic:reverse-proxy language:Rust archived:false fork:false
+  - lightweight reverse proxy hot configuration Rust archived:false fork:false
+  status: candidate
+- repo: spring-cloud/spring-cloud-gateway
+  name: Spring Cloud Gateway
+  category: api-gateway
+  description_zh: 基于 Spring 的 API 网关，为 JVM 微服务提供路由、过滤器、限流和服务发现集成。
+  tags:
+  - http
+  - spring
+  - java
+  - filters
+  - rate-limiting
+  - service-discovery
+  why_candidate: 它是 Spring Cloud 生态的官方边缘网关实现，适合评估与独立代理不同的应用框架内网关模式。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:spring-cloud/spring-cloud-gateway
+  status: candidate
+- repo: tailscale/tailscale
+  name: Tailscale
+  category: zero-trust-access
+  description_zh: 基于 WireGuard 的身份感知组网客户端，包含向私有网络或公网发布本地服务的 Serve 与 Funnel 能力。
+  tags:
+  - wireguard
+  - mesh-network
+  - identity
+  - serve
+  - funnel
+  why_candidate: 项目将设备身份、访问控制和服务反向代理集成到加密网络中，是托管控制面零信任入口的重要方案。
+  source_queries:
+  - Tailscale Serve Funnel reverse proxy GitHub
+  - topic:wireguard identity access service exposure
+  status: needs-review
+- repo: ThreeMammals/Ocelot
+  name: Ocelot
+  category: api-gateway
+  description_zh: 面向 .NET 的 API 网关库，通过应用内配置提供路由、聚合、鉴权、限流和服务发现。
+  tags:
+  - http
+  - dotnet
+  - api-aggregation
+  - rate-limiting
+  - service-discovery
+  - library
+  why_candidate: 项目代表将网关嵌入 ASP.NET 应用的实现路线，反向代理和 API 聚合是其主要用途。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:ThreeMammals/Ocelot
+  status: candidate
+- repo: tobychui/zoraxy
+  name: Zoraxy
+  category: proxy-management-ui
+  description_zh: 自带 Web 管理界面的通用 HTTP 反向代理与 TCP/UDP 转发工具。
+  tags:
+  - webui
+  - http
+  - tcp
+  - udp
+  - access-control
+  why_candidate: 项目不是单纯配置编辑器，而是将反代运行时、证书、访问控制、监控和管理界面整合在一起。
+  source_queries:
+  - topic:reverse-proxy WebUI self-hosted
+  - reverse proxy forwarding tool management interface
+  status: candidate
+- repo: traefik/traefik
+  name: Traefik Proxy
+  category: general-reverse-proxy
+  description_zh: 支持动态服务发现的云原生应用代理与边缘路由器。
+  tags:
+  - http
+  - tcp
+  - udp
+  - docker
+  - kubernetes
+  - service-discovery
+  - automatic-https
+  why_candidate: 可从容器与编排平台动态生成路由，适合服务频繁变化的部署环境，同时也支持静态配置。
+  source_queries:
+  - topic:reverse-proxy docker kubernetes archived:false fork:false
+  - cloud native application proxy service discovery archived:false fork:false
+  status: candidate
+- repo: TykTechnologies/tyk
+  name: Tyk Gateway
+  category: api-gateway
+  description_zh: Go 编写的 API 网关，支持 REST、GraphQL、gRPC 和 TCP 流量的路由、鉴权与限流。
+  tags:
+  - http
+  - tcp
+  - grpc
+  - graphql
+  - api-management
+  - authentication
+  - kubernetes
+  why_candidate: 仓库包含可独立部署的网关核心，协议覆盖和 API 治理能力明确，并提供 Kubernetes 部署生态。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:TykTechnologies/tyk
+  status: needs-review
+- repo: vulcand/oxy
+  name: Oxy
+  category: proxy-library
+  description_zh: 用于组合 HTTP 代理、负载均衡与流量控制的 Go 中间件库。
+  tags:
+  - go
+  - http
+  - reverse-proxy
+  - load-balancing
+  - circuit-breaker
+  - rate-limiting
+  - middleware
+  why_candidate: 提供转发、轮询、重试缓冲、熔断和限流等可组合处理器，适合作为自定义代理的构件。
+  source_queries:
+  - Go middleware HTTP servers proxies archived:false fork:false
+  - reverse proxy library round robin circuit breaker language:Go archived:false fork:false
+  status: candidate
+- repo: wso2/product-apim
+  name: WSO2 API Manager
+  category: api-gateway
+  description_zh: 集 API 网关、生命周期管理、开发者门户和分析集成于一体的 API 管理平台。
+  tags:
+  - http
+  - api-management
+  - policies
+  - developer-portal
+  - kubernetes
+  - java
+  why_candidate: 项目覆盖从代理执行到 API 发布和治理的完整链路，适合作为平台型网关候选。
+  source_queries:
+  - topic:api-gateway archived:false fork:false
+  - repo:wso2/product-apim
+  status: candidate
+- repo: yusing/godoxy
+  name: GoDoxy
+  category: proxy-management-ui
+  description_zh: 面向自托管和容器环境的反向代理，提供 Web 管理、容器自动发现、证书和访问控制。
+  tags:
+  - webui
+  - docker
+  - podman
+  - http
+  - tcp
+  why_candidate: 项目以带 WebUI 的反向代理为明确定位，并覆盖路由发现、证书、日志、指标和 TCP/UDP 转发。
+  source_queries:
+  - topic:reverse-proxy WebUI Docker discovery
+  - self-hosted proxy container orchestrator management UI
+  status: needs-review
+- repo: yyyar/gobetween
+  name: gobetween
+  category: load-balancer
+  description_zh: 支持 TCP、TLS 与 UDP 的单二进制 Layer 4 负载均衡器。
+  tags:
+  - go
+  - tcp
+  - udp
+  - tls
+  - load-balancing
+  - service-discovery
+  - rest-api
+  why_candidate: 协议、发现机制和均衡策略较完整且有生产使用记录；项目声明处于维护模式，需在终审时核查活跃度。
+  source_queries:
+  - minimalistic load balancer TCP UDP TLS archived:false fork:false
+  - topic:load-balancer language:Go service-discovery archived:false fork:false
+  status: needs-review
+- repo: zalando/skipper
+  name: Skipper
+  category: load-balancer
+  description_zh: 面向大规模路由规则与服务组合的 HTTP 路由器和反向代理。
+  tags:
+  - go
+  - http
+  - reverse-proxy
+  - routing
+  - filters
+  - kubernetes
+  - ingress
+  why_candidate: 支持大量动态路由、可组合过滤器和多种配置源，适用于服务平台与入口流量。
+  source_queries:
+  - HTTP router reverse proxy service composition archived:false fork:false
+  - topic:reverse-proxy routing filters language:Go archived:false fork:false
+  status: needs-review

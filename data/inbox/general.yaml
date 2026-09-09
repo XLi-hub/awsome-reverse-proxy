@@ -1,0 +1,252 @@
+- repo: nginx/nginx
+  name: NGINX
+  category: general-reverse-proxy
+  description_zh: "高性能 Web 服务器、反向代理、负载均衡器与内容缓存。"
+  tags: [http, https, tcp, udp, load-balancing, caching, tls]
+  why_candidate: "官方开源仓库；功能成熟、协议覆盖广，并拥有长期生产实践与完善文档。"
+  source_queries:
+    - 'topic:reverse-proxy stars:>=1000 archived:false fork:false'
+    - '"reverse proxy" "load balancer" in:name,description,readme archived:false fork:false'
+  status: candidate
+
+- repo: caddyserver/caddy
+  name: Caddy
+  category: general-reverse-proxy
+  description_zh: "默认自动管理 HTTPS 的模块化 Web 服务器与反向代理。"
+  tags: [http, https, automatic-https, load-balancing, go, modular]
+  why_candidate: "自动证书管理和简洁配置具有代表性，核心模块支持反向代理、健康检查与多种负载均衡策略。"
+  source_queries:
+    - 'topic:reverse-proxy stars:>=1000 archived:false fork:false'
+    - 'automatic HTTPS reverse proxy language:Go archived:false fork:false'
+  status: candidate
+
+- repo: haproxy/haproxy
+  name: HAProxy
+  category: load-balancer
+  description_zh: "面向 TCP 与 HTTP 应用的高可用反向代理和负载均衡器。"
+  tags: [http, tcp, load-balancing, high-availability, tls, proxy-protocol]
+  why_candidate: "长期用于高并发生产环境，具备健康检查、流量调度、TLS 终止和运行时管理能力。"
+  source_queries:
+    - 'topic:load-balancer stars:>=1000 archived:false fork:false'
+    - '"reverse proxy" "TCP" "HTTP" load balancer archived:false fork:false'
+  status: needs-review
+
+- repo: traefik/traefik
+  name: Traefik Proxy
+  category: general-reverse-proxy
+  description_zh: "支持动态服务发现的云原生应用代理与边缘路由器。"
+  tags: [http, tcp, udp, docker, kubernetes, service-discovery, automatic-https]
+  why_candidate: "可从容器与编排平台动态生成路由，适合服务频繁变化的部署环境，同时也支持静态配置。"
+  source_queries:
+    - 'topic:reverse-proxy docker kubernetes archived:false fork:false'
+    - 'cloud native application proxy service discovery archived:false fork:false'
+  status: candidate
+
+- repo: apache/httpd
+  name: Apache HTTP Server
+  category: general-reverse-proxy
+  description_zh: "模块化 HTTP 服务器，可通过 mod_proxy 提供反向代理与负载均衡。"
+  tags: [http, https, reverse-proxy, load-balancing, modules, tls]
+  why_candidate: "历史成熟、跨平台且模块生态广，反向代理能力覆盖 HTTP、WebSocket、FastCGI 等常见后端。"
+  source_queries:
+    - 'web server reverse proxy mod_proxy archived:false fork:false'
+    - 'topic:http-server reverse-proxy stars:>=1000 archived:false fork:false'
+  status: candidate
+
+- repo: openresty/openresty
+  name: OpenResty
+  category: general-reverse-proxy
+  description_zh: "基于 NGINX 与 LuaJIT 的可脚本化高性能 Web 平台。"
+  tags: [nginx, lua, luajit, http, reverse-proxy, programmable]
+  why_candidate: "将成熟的 NGINX 代理能力与 Lua 扩展结合，适合实现定制路由、鉴权和流量处理逻辑。"
+  source_queries:
+    - 'nginx LuaJIT reverse proxy archived:false fork:false'
+    - 'programmable reverse proxy Lua stars:>=1000 archived:false fork:false'
+  status: needs-review
+
+- repo: alibaba/tengine
+  name: Tengine
+  category: general-reverse-proxy
+  description_zh: "源自淘宝、兼容 NGINX 的高性能 Web 服务器与反向代理。"
+  tags: [nginx, http, http3, reverse-proxy, load-balancing, health-check]
+  why_candidate: "在 NGINX 基础上提供动态配置、主动健康检查和扩展负载均衡等生产能力。"
+  source_queries:
+    - 'nginx compatible reverse proxy archived:false fork:false'
+    - 'high performance web server reverse proxy HTTP/3 archived:false fork:false'
+  status: candidate
+
+- repo: h2o/h2o
+  name: H2O
+  category: general-reverse-proxy
+  description_zh: "针对 HTTP/1、HTTP/2 与 HTTP/3 优化的 Web 服务器和反向代理。"
+  tags: [http1, http2, http3, quic, reverse-proxy, tls]
+  why_candidate: "聚焦现代 HTTP 协议与低延迟实现，可作为独立服务器或面向应用后端的反向代理。"
+  source_queries:
+    - 'HTTP/2 HTTP/3 reverse proxy archived:false fork:false'
+    - 'optimized HTTP server proxy QUIC archived:false fork:false'
+  status: candidate
+
+- repo: sozu-proxy/sozu
+  name: Sōzu
+  category: lightweight-proxy
+  description_zh: "使用 Rust 构建、支持运行时热配置的轻量反向代理。"
+  tags: [rust, http, http2, tcp, udp, tls, hot-reload]
+  why_candidate: "强调内存安全、不中断升级和运行时配置，覆盖 HTTP、TCP、UDP 与 TLS 代理。"
+  source_queries:
+    - 'topic:reverse-proxy language:Rust archived:false fork:false'
+    - 'lightweight reverse proxy hot configuration Rust archived:false fork:false'
+  status: candidate
+
+- repo: nginx-proxy/nginx-proxy
+  name: nginx-proxy
+  category: lightweight-proxy
+  description_zh: "根据 Docker 容器元数据自动生成配置的 NGINX 反向代理。"
+  tags: [nginx, docker, service-discovery, automatic-configuration, http, tls]
+  why_candidate: "为单机 Docker 场景提供成熟的自动发现与反向代理流程，使用门槛较低。"
+  source_queries:
+    - 'automated nginx reverse proxy Docker archived:false fork:false'
+    - 'topic:reverse-proxy topic:docker stars:>=1000 archived:false fork:false'
+  status: candidate
+
+- repo: mholt/caddy-l4
+  name: Project Conncept (caddy-l4)
+  category: lightweight-proxy
+  description_zh: "为 Caddy 提供 TCP 与 UDP 路由和代理能力的 Layer 4 应用。"
+  tags: [caddy, tcp, udp, tls, sni, layer4, plugin]
+  why_candidate: "可按协议、TLS SNI 等连接属性组合匹配与处理，但项目明确标注仍在开发并可能有破坏性变更。"
+  source_queries:
+    - 'Caddy layer 4 TCP UDP proxy archived:false fork:false'
+    - 'SNI TCP router Caddy archived:false fork:false'
+  status: needs-review
+
+- repo: zalando/skipper
+  name: Skipper
+  category: load-balancer
+  description_zh: "面向大规模路由规则与服务组合的 HTTP 路由器和反向代理。"
+  tags: [go, http, reverse-proxy, routing, filters, kubernetes, ingress]
+  why_candidate: "支持大量动态路由、可组合过滤器和多种配置源，适用于服务平台与入口流量。"
+  source_queries:
+    - 'HTTP router reverse proxy service composition archived:false fork:false'
+    - 'topic:reverse-proxy routing filters language:Go archived:false fork:false'
+  status: needs-review
+
+- repo: fabiolb/fabio
+  name: fabio
+  category: load-balancer
+  description_zh: "通过 Consul 服务发现自动配置的 HTTP(S) 与 TCP 负载均衡路由器。"
+  tags: [go, consul, service-discovery, http, tcp, load-balancing]
+  why_candidate: "以零配置式 Consul 集成为核心，能随健康服务变化实时更新路由，单文件部署简单。"
+  source_queries:
+    - 'Consul load balancer reverse proxy archived:false fork:false'
+    - 'zero config HTTP TCP router Consul language:Go archived:false fork:false'
+  status: candidate
+
+- repo: yyyar/gobetween
+  name: gobetween
+  category: load-balancer
+  description_zh: "支持 TCP、TLS 与 UDP 的单二进制 Layer 4 负载均衡器。"
+  tags: [go, tcp, udp, tls, load-balancing, service-discovery, rest-api]
+  why_candidate: "协议、发现机制和均衡策略较完整且有生产使用记录；项目声明处于维护模式，需在终审时核查活跃度。"
+  source_queries:
+    - 'minimalistic load balancer TCP UDP TLS archived:false fork:false'
+    - 'topic:load-balancer language:Go service-discovery archived:false fork:false'
+  status: needs-review
+
+- repo: google/seesaw
+  name: Seesaw
+  category: load-balancer
+  description_zh: "基于 Linux Virtual Server 的高可用负载均衡平台。"
+  tags: [lvs, ipvs, layer4, anycast, dsr, high-availability, go]
+  why_candidate: "覆盖 Anycast、DSR、多 VLAN 与双节点高可用，是传统数据中心 Layer 4 均衡架构的代表实现。"
+  source_queries:
+    - 'LVS load balancing platform archived:false fork:false'
+    - 'Linux Virtual Server high availability load balancer archived:false fork:false'
+  status: candidate
+
+- repo: facebookincubator/katran
+  name: Katran
+  category: load-balancer
+  description_zh: "基于 Linux eBPF/XDP 的高性能 Layer 4 负载均衡器。"
+  tags: [ebpf, xdp, layer4, load-balancing, linux, high-performance]
+  why_candidate: "展示并提供大规模部署使用的 eBPF/XDP 数据平面，适合研究高吞吐网络负载均衡。"
+  source_queries:
+    - 'eBPF XDP layer 4 load balancer archived:false fork:false'
+    - 'topic:load-balancer topic:ebpf archived:false fork:false'
+  status: candidate
+
+- repo: loxilb-io/loxilb
+  name: LoxiLB
+  category: load-balancer
+  description_zh: "面向云原生与边缘场景的 eBPF 云原生负载均衡器。"
+  tags: [ebpf, layer4, kubernetes, nat, load-balancing, observability]
+  why_candidate: "结合 eBPF 数据平面、Kubernetes 集成和多种网络服务能力，适合软件定义的 Layer 4 均衡场景。"
+  source_queries:
+    - 'cloud native eBPF load balancer archived:false fork:false'
+    - 'topic:load-balancer kubernetes eBPF archived:false fork:false'
+  status: candidate
+
+- repo: inetaf/tcpproxy
+  name: tcpproxy
+  category: lightweight-proxy
+  description_zh: "可按静态规则、HTTP Host 与 TLS SNI 路由连接的 Go TCP 代理。"
+  tags: [go, tcp, sni, tls, host-routing, library, single-binary]
+  why_candidate: "同时提供库和命令行工具，以较小代码面实现常用的 TCP、Host 与 SNI 分流。"
+  source_queries:
+    - 'TCP proxy SNI Host routing language:Go archived:false fork:false'
+    - 'lightweight TCP reverse proxy library Go archived:false fork:false'
+  status: candidate
+
+- repo: cloudflare/pingora
+  name: Pingora
+  category: proxy-library
+  description_zh: "用于构建高性能、可靠且可编程网络服务的 Rust 代理框架。"
+  tags: [rust, http, http2, grpc, websocket, load-balancing, framework]
+  why_candidate: "由 Cloudflare 开源并用于其大规模流量基础设施，提供代理、负载均衡、故障转移和可观测性组件。"
+  source_queries:
+    - 'proxy framework language:Rust archived:false fork:false'
+    - 'programmable HTTP proxy load balancing Rust archived:false fork:false'
+  status: candidate
+
+- repo: dotnet/yarp
+  name: YARP
+  category: proxy-library
+  description_zh: "基于 ASP.NET Core 构建可定制高性能 HTTP 反向代理的工具包。"
+  tags: [dotnet, aspnet-core, http, reverse-proxy, load-balancing, library]
+  why_candidate: "由 .NET 团队维护，提供配置 API、可扩展处理管线和项目模板，适合嵌入业务应用。"
+  source_queries:
+    - 'reverse proxy toolkit language:C# archived:false fork:false'
+    - 'ASP.NET Core high performance reverse proxy archived:false fork:false'
+  status: candidate
+
+- repo: http-party/node-http-proxy
+  name: node-http-proxy
+  category: proxy-library
+  description_zh: "支持 HTTP(S) 与 WebSocket 的 Node.js 可编程代理库。"
+  tags: [nodejs, javascript, http, https, websocket, reverse-proxy, library]
+  why_candidate: "API 聚焦代理请求和连接升级，长期作为 Node.js 生态中构建反向代理与负载均衡器的基础库。"
+  source_queries:
+    - 'HTTP proxy library Node.js WebSocket archived:false fork:false'
+    - 'reverse proxy library language:JavaScript stars:>=1000 archived:false fork:false'
+  status: needs-review
+
+- repo: vulcand/oxy
+  name: Oxy
+  category: proxy-library
+  description_zh: "用于组合 HTTP 代理、负载均衡与流量控制的 Go 中间件库。"
+  tags: [go, http, reverse-proxy, load-balancing, circuit-breaker, rate-limiting, middleware]
+  why_candidate: "提供转发、轮询、重试缓冲、熔断和限流等可组合处理器，适合作为自定义代理的构件。"
+  source_queries:
+    - 'Go middleware HTTP servers proxies archived:false fork:false'
+    - 'reverse proxy library round robin circuit breaker language:Go archived:false fork:false'
+  status: candidate
+
+- repo: mwitkow/grpc-proxy
+  name: grpc-proxy
+  category: proxy-library
+  description_zh: "支持透明转发和自定义路由的 Go gRPC 反向代理库。"
+  tags: [go, grpc, http2, reverse-proxy, routing, library]
+  why_candidate: "针对 gRPC 方法提供低开销透明代理和可插拔路由，补足通用 HTTP 代理难以直接覆盖的 gRPC 场景。"
+  source_queries:
+    - 'gRPC reverse proxy language:Go archived:false fork:false'
+    - 'transparent gRPC proxy routing archived:false fork:false'
+  status: candidate

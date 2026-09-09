@@ -1,0 +1,53 @@
+name: Refresh GitHub metadata
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 3 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: refresh-catalog
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python scripts/catalog.py merge --check
+      - run: python scripts/enrich_github.py --refresh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: python scripts/enrich_releases.py --refresh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: python scripts/apply_reviews.py
+      - run: python scripts/score_projects.py
+      - run: python scripts/generate_readme.py
+      - run: python -m unittest discover -s tests
+      - name: Open refresh pull request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if git diff --quiet; then
+            echo "No metadata changes."
+            exit 0
+          fi
+          branch="codex/refresh-catalog-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add data/projects.yaml docs/CATALOG.md
+          git commit -m "chore: refresh catalog metadata"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" --title "chore: refresh catalog metadata" --body "Automated weekly GitHub metadata, Release, score, and catalog refresh."

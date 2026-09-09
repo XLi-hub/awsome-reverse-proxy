@@ -1,0 +1,230 @@
+- repo: alibaba/tengine
+  decision: accepted
+  suitable_for:
+  - 通用 HTTP/TCP 服务入口、TLS 终止与上游转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 BSD-2-Clause。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/alibaba/tengine
+  reviewed_at: '2026-09-09'
+- repo: apache/httpd
+  decision: accepted
+  suitable_for:
+  - 通用 HTTP/TCP 服务入口、TLS 终止与上游转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/apache/httpd
+  reviewed_at: '2026-09-09'
+- repo: caddyserver/caddy
+  decision: accepted
+  suitable_for:
+  - 通用 HTTP/TCP 服务入口、TLS 终止与上游转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/caddyserver/caddy
+  reviewed_at: '2026-09-09'
+- repo: cloudflare/pingora
+  decision: accepted
+  suitable_for:
+  - 需要在应用中嵌入或定制代理能力的开发团队
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/cloudflare/pingora
+  reviewed_at: '2026-09-09'
+- repo: dotnet/yarp
+  decision: accepted
+  suitable_for:
+  - 需要在应用中嵌入或定制代理能力的开发团队
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/dotnet/yarp
+  reviewed_at: '2026-09-09'
+- repo: fabiolb/fabio
+  decision: accepted
+  suitable_for:
+  - 需要健康检查和流量分配的服务入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/fabiolb/fabio
+  reviewed_at: '2026-09-09'
+- repo: facebookincubator/katran
+  decision: accepted
+  suitable_for:
+  - 需要健康检查和流量分配的服务入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 GPL-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/facebookincubator/katran
+  reviewed_at: '2026-09-09'
+- repo: google/seesaw
+  decision: accepted
+  suitable_for:
+  - 需要健康检查和流量分配的服务入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/google/seesaw
+  reviewed_at: '2026-09-09'
+- repo: h2o/h2o
+  decision: accepted
+  suitable_for:
+  - 通用 HTTP/TCP 服务入口、TLS 终止与上游转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/h2o/h2o
+  reviewed_at: '2026-09-09'
+- repo: haproxy/haproxy
+  decision: needs-review
+  suitable_for:
+  - 需要健康检查和流量分配的服务入口
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: GitHub API 返回的许可证为 NOASSERTION，需核对实际 LICENSE、子目录和发行物授权后再决定。
+  evidence_urls:
+  - https://github.com/haproxy/haproxy
+  reviewed_at: '2026-09-09'
+- repo: http-party/node-http-proxy
+  decision: needs-review
+  suitable_for:
+  - 需要在应用中嵌入或定制代理能力的开发团队
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: GitHub API 返回的许可证为 NOASSERTION，需核对实际 LICENSE、子目录和发行物授权后再决定。
+  evidence_urls:
+  - https://github.com/http-party/node-http-proxy
+  reviewed_at: '2026-09-09'
+- repo: inetaf/tcpproxy
+  decision: accepted
+  suitable_for:
+  - 单机、自托管或资源受限环境中的轻量转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/inetaf/tcpproxy
+  reviewed_at: '2026-09-09'
+- repo: loxilb-io/loxilb
+  decision: accepted
+  suitable_for:
+  - 需要健康检查和流量分配的服务入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/loxilb-io/loxilb
+  reviewed_at: '2026-09-09'
+- repo: mholt/caddy-l4
+  decision: needs-review
+  suitable_for:
+  - 单机、自托管或资源受限环境中的轻量转发
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 官方 README 明确标为实验性，并提示可能发生破坏性变更。
+  evidence_urls:
+  - https://github.com/mholt/caddy-l4
+  reviewed_at: '2026-09-09'
+- repo: mwitkow/grpc-proxy
+  decision: accepted
+  suitable_for:
+  - 需要在应用中嵌入或定制代理能力的开发团队
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/mwitkow/grpc-proxy
+  reviewed_at: '2026-09-09'
+- repo: nginx-proxy/nginx-proxy
+  decision: accepted
+  suitable_for:
+  - 单机、自托管或资源受限环境中的轻量转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/nginx-proxy/nginx-proxy
+  reviewed_at: '2026-09-09'
+- repo: nginx/nginx
+  decision: accepted
+  suitable_for:
+  - 通用 HTTP/TCP 服务入口、TLS 终止与上游转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 BSD-2-Clause。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/nginx/nginx
+  reviewed_at: '2026-09-09'
+- repo: openresty/openresty
+  decision: needs-review
+  suitable_for:
+  - 通用 HTTP/TCP 服务入口、TLS 终止与上游转发
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: GitHub API 返回的许可证为 NOASSERTION，需核对实际 LICENSE、子目录和发行物授权后再决定。
+  evidence_urls:
+  - https://github.com/openresty/openresty
+  reviewed_at: '2026-09-09'
+- repo: sozu-proxy/sozu
+  decision: accepted
+  suitable_for:
+  - 单机、自托管或资源受限环境中的轻量转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 AGPL-3.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/sozu-proxy/sozu
+  reviewed_at: '2026-09-09'
+- repo: traefik/traefik
+  decision: accepted
+  suitable_for:
+  - 通用 HTTP/TCP 服务入口、TLS 终止与上游转发
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/traefik/traefik
+  reviewed_at: '2026-09-09'
+- repo: vulcand/oxy
+  decision: accepted
+  suitable_for:
+  - 需要在应用中嵌入或定制代理能力的开发团队
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/vulcand/oxy
+  reviewed_at: '2026-09-09'
+- repo: yyyar/gobetween
+  decision: needs-review
+  suitable_for:
+  - 需要健康检查和流量分配的服务入口
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 官方 README 明确说明处于维护模式，需要继续核验发布和安全维护情况。
+  evidence_urls:
+  - https://github.com/yyyar/gobetween
+  reviewed_at: '2026-09-09'
+- repo: zalando/skipper
+  decision: needs-review
+  suitable_for:
+  - 需要健康检查和流量分配的服务入口
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: GitHub API 返回的许可证为 NOASSERTION，需核对实际 LICENSE、子目录和发行物授权后再决定。
+  evidence_urls:
+  - https://github.com/zalando/skipper
+  reviewed_at: '2026-09-09'

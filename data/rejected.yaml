@@ -1,0 +1,11 @@
+- repo: minio/sidekick
+  reason_code: archived-or-deprecated
+  reason_zh: GitHub 上游已于 2026-07-14 由维护者归档，不进入活跃项目候选池。
+  reviewed_at: 2026-09-08
+  replacement: null
+
+- repo: varnishcache/varnish-cache
+  reason_code: archived-or-deprecated
+  reason_zh: GitHub 上游已于 2026-02-16 归档，README 明确说明代码仓库已迁出 GitHub。
+  reviewed_at: 2026-09-08
+  replacement: https://code.vinyl-cache.org/vinyl-cache/vinyl-cache

@@ -1,0 +1,242 @@
+- repo: Kong/kong
+  name: Kong Gateway
+  category: api-gateway
+  description_zh: 基于 OpenResty 的 API、AI 与 MCP 网关，提供动态路由、负载均衡、鉴权和插件扩展。
+  tags: [http, https, grpc, api-management, plugins, kubernetes, ai-gateway]
+  why_candidate: 项目将反向代理与 API 管理作为核心能力，并拥有独立数据平面、声明式配置和官方 Kubernetes 控制器。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:Kong/kong"]
+  status: candidate
+
+- repo: apache/apisix
+  name: Apache APISIX
+  category: api-gateway
+  description_zh: 基于 OpenResty 和 etcd 的动态 API 网关，覆盖七层路由、四层代理、流量治理和插件扩展。
+  tags: [http, https, tcp, udp, grpc, api-management, plugins, kubernetes]
+  why_candidate: Apache 顶级项目，反向代理是核心数据平面能力，并提供动态配置、多协议支持和独立 Ingress Controller。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:apache/apisix"]
+  status: candidate
+
+- repo: TykTechnologies/tyk
+  name: Tyk Gateway
+  category: api-gateway
+  description_zh: Go 编写的 API 网关，支持 REST、GraphQL、gRPC 和 TCP 流量的路由、鉴权与限流。
+  tags: [http, tcp, grpc, graphql, api-management, authentication, kubernetes]
+  why_candidate: 仓库包含可独立部署的网关核心，协议覆盖和 API 治理能力明确，并提供 Kubernetes 部署生态。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:TykTechnologies/tyk"]
+  status: needs-review
+
+- repo: krakend/krakend-ce
+  name: KrakenD Community Edition
+  category: api-gateway
+  description_zh: Go 编写的无状态声明式 API 网关，侧重请求聚合、转换、路由和中间件组合。
+  tags: [http, api-aggregation, stateless, declarative-config, middleware, golang]
+  why_candidate: 无状态网关模型与常见动态控制平面项目形成差异，反向代理和 API 聚合均属于其核心用途。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:krakend/krakend-ce"]
+  status: candidate
+
+- repo: gravitee-io/gravitee-api-management
+  name: Gravitee API Management
+  category: api-gateway
+  description_zh: 包含网关、管理 API 和开发者门户的 API 管理平台，支持同步 API 与事件驱动 API。
+  tags: [http, api-management, event-driven, policies, developer-portal, kubernetes]
+  why_candidate: 仓库提供完整的开源 API 管理实现，网关运行时和策略执行是平台的核心组成部分。
+  source_queries: ["api gateway in:name,description archived:false fork:false", "repo:gravitee-io/gravitee-api-management"]
+  status: candidate
+
+- repo: apache/shenyu
+  name: Apache ShenYu
+  category: api-gateway
+  description_zh: Java 原生 API 网关，提供服务代理、协议转换、动态流量控制和可插拔治理能力。
+  tags: [http, grpc, dubbo, websocket, mqtt, protocol-conversion, plugins, java]
+  why_candidate: Apache 顶级项目，支持多种微服务协议，数据同步和插件热更新机制适合动态网关场景。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:apache/shenyu"]
+  status: candidate
+
+- repo: spring-cloud/spring-cloud-gateway
+  name: Spring Cloud Gateway
+  category: api-gateway
+  description_zh: 基于 Spring 的 API 网关，为 JVM 微服务提供路由、过滤器、限流和服务发现集成。
+  tags: [http, spring, java, filters, rate-limiting, service-discovery]
+  why_candidate: 它是 Spring Cloud 生态的官方边缘网关实现，适合评估与独立代理不同的应用框架内网关模式。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:spring-cloud/spring-cloud-gateway"]
+  status: candidate
+
+- repo: wso2/product-apim
+  name: WSO2 API Manager
+  category: api-gateway
+  description_zh: 集 API 网关、生命周期管理、开发者门户和分析集成于一体的 API 管理平台。
+  tags: [http, api-management, policies, developer-portal, kubernetes, java]
+  why_candidate: 项目覆盖从代理执行到 API 发布和治理的完整链路，适合作为平台型网关候选。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:wso2/product-apim"]
+  status: candidate
+
+- repo: easegress-io/easegress
+  name: Easegress
+  category: api-gateway
+  description_zh: Go 编写的云原生流量编排系统，通过可组合管道提供反向代理、API 治理与韧性策略。
+  tags: [http, http3, mqtt, traffic-orchestration, service-discovery, wasm, kubernetes]
+  why_candidate: 项目以反向代理和流量管道为核心，覆盖服务发现、灰度发布、可观测性和 Kubernetes 集成。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:easegress-io/easegress"]
+  status: candidate
+
+- repo: higress-group/higress
+  name: Higress
+  category: api-gateway
+  description_zh: 基于 Envoy 和 Istio 技术栈的云原生 API 与 AI 网关，支持 Kubernetes 服务发现和 Wasm 插件。
+  tags: [http, grpc, envoy, istio, wasm, kubernetes, ai-gateway]
+  why_candidate: 项目同时覆盖 Kubernetes 入口、API 治理和 AI 流量，数据平面与控制平面边界清晰。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:higress-group/higress"]
+  status: candidate
+
+- repo: kgateway-dev/kgateway
+  name: kgateway
+  category: api-gateway
+  description_zh: 基于 Envoy、以 Kubernetes Gateway API 配置的云原生 API 网关控制平面。
+  tags: [http, grpc, envoy, gateway-api, kubernetes, api-management]
+  why_candidate: 项目是原 Gloo 开源网关的后继仓库，并以标准 Gateway API 和 Envoy 数据平面作为当前维护方向。
+  source_queries: ["gateway api implementation envoy archived:false fork:false", "repo:kgateway-dev/kgateway"]
+  status: needs-review
+
+- repo: emissary-ingress/emissary
+  name: Emissary-ingress
+  category: api-gateway
+  description_zh: 基于 Envoy 的 Kubernetes 原生七层负载均衡器与 API 网关，使用 CRD 管理入口流量。
+  tags: [http, grpc, envoy, ingress, kubernetes, crd, rate-limiting]
+  why_candidate: 它将 Kubernetes 入口与 API 网关策略结合，支持渐进式交付、限流和服务网格集成。
+  source_queries: ["kubernetes native api gateway envoy archived:false fork:false", "repo:emissary-ingress/emissary"]
+  status: candidate
+
+- repo: ThreeMammals/Ocelot
+  name: Ocelot
+  category: api-gateway
+  description_zh: 面向 .NET 的 API 网关库，通过应用内配置提供路由、聚合、鉴权、限流和服务发现。
+  tags: [http, dotnet, api-aggregation, rate-limiting, service-discovery, library]
+  why_candidate: 项目代表将网关嵌入 ASP.NET 应用的实现路线，反向代理和 API 聚合是其主要用途。
+  source_queries: ["topic:api-gateway archived:false fork:false", "repo:ThreeMammals/Ocelot"]
+  status: candidate
+
+- repo: envoyproxy/ai-gateway
+  name: Envoy AI Gateway
+  category: api-gateway
+  description_zh: 构建在 Envoy Gateway 之上的生成式 AI 流量网关，提供统一后端、凭据策略、路由和令牌级治理。
+  tags: [http, envoy, gateway-api, kubernetes, ai-gateway, rate-limiting, observability]
+  why_candidate: 项目把模型服务反向代理和治理作为明确边界，并复用成熟的 Envoy Gateway 控制面与数据面。
+  source_queries: ["topic:api-gateway archived:false fork:false ai-gateway", "repo:envoyproxy/ai-gateway"]
+  status: candidate
+
+- repo: envoyproxy/gateway
+  name: Envoy Gateway
+  category: ingress-controller
+  description_zh: 管理 Envoy Proxy 的应用网关，支持以 Kubernetes Gateway API 配置入口流量和策略。
+  tags: [http, grpc, envoy, gateway-api, kubernetes, xds]
+  why_candidate: 它是 Envoy 官方面向 Gateway API 的控制平面，避免用户直接维护底层 xDS 配置。
+  source_queries: ["gateway api implementation envoy archived:false fork:false", "repo:envoyproxy/gateway"]
+  status: candidate
+
+- repo: nginx/kubernetes-ingress
+  name: NGINX Ingress Controller
+  category: ingress-controller
+  description_zh: NGINX 官方维护的 Kubernetes Ingress Controller，支持 NGINX 开源版和 NGINX Plus 数据平面。
+  tags: [http, https, tls, nginx, ingress, gateway-api, kubernetes]
+  why_candidate: 官方仓库持续提供版本、镜像、Helm 与配置文档，并覆盖标准 Ingress 及扩展入口能力。
+  source_queries: ["topic:ingress-controller archived:false fork:false", "repo:nginx/kubernetes-ingress"]
+  status: candidate
+
+- repo: projectcontour/contour
+  name: Contour
+  category: ingress-controller
+  description_zh: 使用 Envoy 作为数据平面的 Kubernetes 入口控制器，支持 Ingress、HTTPProxy CRD 和 Gateway API。
+  tags: [http, https, envoy, ingress, gateway-api, kubernetes, cncf]
+  why_candidate: 项目以动态入口配置为核心，同时提供标准 API 与更丰富的 HTTPProxy 配置模型。
+  source_queries: ["topic:ingress-controller archived:false fork:false", "repo:projectcontour/contour"]
+  status: candidate
+
+- repo: Kong/kubernetes-ingress-controller
+  name: Kong Ingress Controller
+  category: ingress-controller
+  description_zh: 将 Kubernetes Ingress、Gateway API 和 Kong CRD 转换为 Kong Gateway 配置的控制器。
+  tags: [http, grpc, tcp, udp, ingress, gateway-api, kubernetes, kong]
+  why_candidate: 控制器覆盖多协议 Gateway API 与 Kong 插件配置；其新功能向 Kong Operator 迁移，仍值得在审核阶段比较维护路线。
+  source_queries: ["topic:ingress-controller archived:false fork:false", "repo:Kong/kubernetes-ingress-controller"]
+  status: needs-review
+
+- repo: haproxytech/kubernetes-ingress
+  name: HAProxy Kubernetes Ingress Controller
+  category: ingress-controller
+  description_zh: HAProxy Technologies 维护的 Kubernetes 入口控制器，以 HAProxy 处理集群外部到服务的流量。
+  tags: [http, https, tcp, tls, haproxy, ingress, kubernetes]
+  why_candidate: 项目由 HAProxy 官方团队维护，提供镜像、Helm Chart 和与 HAProxy 能力对应的入口配置。
+  source_queries: ["topic:ingress-controller archived:false fork:false", "repo:haproxytech/kubernetes-ingress"]
+  status: candidate
+
+- repo: jcmoraisjr/haproxy-ingress
+  name: HAProxy Ingress
+  category: ingress-controller
+  description_zh: 社区维护的 HAProxy Kubernetes Ingress Controller，提供注解、ConfigMap 和自定义资源驱动的路由配置。
+  tags: [http, https, tcp, tls, haproxy, ingress, kubernetes]
+  why_candidate: 它是区别于厂商控制器的成熟 HAProxy 入口实现，具备独立代码、发布和较完整的配置文档。
+  source_queries: ["topic:ingress-controller archived:false fork:false", "repo:jcmoraisjr/haproxy-ingress"]
+  status: candidate
+
+- repo: apache/apisix-ingress-controller
+  name: APISIX Ingress Controller
+  category: ingress-controller
+  description_zh: 使用 Gateway API 和 APISIX 自定义资源动态管理 Apache APISIX 数据平面的 Kubernetes 控制器。
+  tags: [http, grpc, ingress, gateway-api, kubernetes, apisix]
+  why_candidate: 项目是 APISIX 官方入口控制器，当前设计直接围绕 Gateway API 资源管理 APISIX Gateway。
+  source_queries: ["topic:ingress-controller archived:false fork:false", "repo:apache/apisix-ingress-controller"]
+  status: candidate
+
+- repo: istio/istio
+  name: Istio
+  category: service-mesh-gateway
+  description_zh: 基于 Envoy 的服务网格控制平面，通过入口、出口和跨网络网关统一执行路由、安全与遥测策略。
+  tags: [http, tcp, grpc, envoy, ingress-gateway, egress-gateway, gateway-api, kubernetes]
+  why_candidate: 项目包含正式的网关部署与流量管理能力，覆盖网格南北向、东西向及多集群入口场景。
+  source_queries: ["topic:service-mesh archived:false fork:false gateway", "repo:istio/istio"]
+  status: needs-review
+
+- repo: cilium/cilium
+  name: Cilium
+  category: service-mesh-gateway
+  description_zh: 基于 eBPF 的 Kubernetes 网络与安全平台，集成 Envoy 提供 Ingress、Gateway API 和服务网格七层处理。
+  tags: [ebpf, envoy, ingress, egress, gateway-api, service-mesh, kubernetes]
+  why_candidate: 项目在同一网络数据面中实现入口网关、服务网格和策略能力，是非传统 Sidecar 路线的重要候选。
+  source_queries: ["topic:service-mesh archived:false fork:false gateway-api", "repo:cilium/cilium"]
+  status: needs-review
+
+- repo: kumahq/kuma
+  name: Kuma
+  category: service-mesh-gateway
+  description_zh: 基于 Envoy 的多区域服务网格，支持 Kubernetes、虚拟机和裸机环境中的入口及区域间网关。
+  tags: [http, tcp, envoy, ingress-gateway, zone-gateway, multi-cluster, kubernetes]
+  why_candidate: 项目以跨平台、多区域网格为主要定位，并提供内置或委托网关模式处理网格边界流量。
+  source_queries: ["topic:service-mesh archived:false fork:false gateway", "repo:kumahq/kuma"]
+  status: needs-review
+
+- repo: envoyproxy/envoy
+  name: Envoy Proxy
+  category: cloud-native-proxy
+  description_zh: 面向云原生服务的高性能四层与七层代理，提供动态 xDS 配置、服务发现、负载均衡和可观测性。
+  tags: [http, tcp, udp, grpc, xds, load-balancing, service-mesh, kubernetes]
+  why_candidate: Envoy 是多种 Ingress、Gateway API 和服务网格项目的数据平面，仓库本身也可独立作为边缘代理运行。
+  source_queries: ["cloud native edge proxy service mesh archived:false fork:false", "repo:envoyproxy/envoy"]
+  status: candidate
+
+- repo: flomesh-io/pipy
+  name: Pipy
+  category: cloud-native-proxy
+  description_zh: 面向云、边缘和物联网的可编程网络代理，通过组合过滤器实现反向代理、协议处理与流量治理。
+  tags: [http, tcp, udp, mqtt, programmable-proxy, edge, service-mesh]
+  why_candidate: 项目将可编程代理作为核心抽象，可用于入口、出口、Sidecar、API 网关和负载均衡等多种数据平面角色。
+  source_queries: ["cloud native programmable proxy archived:false fork:false", "repo:flomesh-io/pipy"]
+  status: needs-review
+
+- repo: mosn/mosn
+  name: MOSN
+  category: cloud-native-proxy
+  description_zh: Go 编写的模块化云原生网络代理，可用作四层与七层负载均衡器、服务网格数据平面或入口网关。
+  tags: [http, tcp, udp, tls, service-mesh, ingress, api-gateway, wasm]
+  why_candidate: 项目同时提供独立代理和 Istio 集成能力，多协议及扩展机制使其适合云原生边缘数据平面评估。
+  source_queries: ["cloud native network proxy service mesh archived:false fork:false", "repo:mosn/mosn"]
+  status: candidate

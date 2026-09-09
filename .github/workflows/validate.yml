@@ -1,0 +1,29 @@
+name: Validate catalog
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/catalog.py validate
+      - run: python scripts/discover.py --check
+      - run: python scripts/catalog.py merge --check
+      - run: python scripts/apply_reviews.py --check
+      - run: python scripts/score_projects.py --check
+      - run: python scripts/generate_readme.py --check

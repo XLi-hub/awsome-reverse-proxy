@@ -1,0 +1,240 @@
+- repo: 0xJacky/nginx-ui
+  decision: accepted
+  suitable_for:
+  - 希望通过 Web 界面管理反代、证书和路由的自托管用户
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 AGPL-3.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/0xJacky/nginx-ui
+  reviewed_at: '2026-09-09'
+- repo: antoniomika/sish
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/antoniomika/sish
+  reviewed_at: '2026-09-09'
+- repo: azukaar/Cosmos-Server
+  decision: needs-review
+  suitable_for:
+  - 希望通过 Web 界面管理反代、证书和路由的自托管用户
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 仓库使用带 Commons Clause 的许可证组合，不能仅按标准 Apache-2.0 表述。
+  evidence_urls:
+  - https://github.com/azukaar/Cosmos-Server
+  reviewed_at: '2026-09-09'
+- repo: bunkerity/bunkerweb
+  decision: accepted
+  suitable_for:
+  - 希望通过 Web 界面管理反代、证书和路由的自托管用户
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 AGPL-3.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/bunkerity/bunkerweb
+  reviewed_at: '2026-09-09'
+- repo: cloudflare/cloudflared
+  decision: needs-review
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 仓库是连接器，生产入口依赖 Cloudflare 托管边缘和控制面。
+  evidence_urls:
+  - https://github.com/cloudflare/cloudflared
+  reviewed_at: '2026-09-09'
+- repo: ekzhang/bore
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/ekzhang/bore
+  reviewed_at: '2026-09-09'
+- repo: erebe/wstunnel
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 BSD-3-Clause。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/erebe/wstunnel
+  reviewed_at: '2026-09-09'
+- repo: exposedev/expose
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/exposedev/expose
+  reviewed_at: '2026-09-09'
+- repo: fatedier/frp
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/fatedier/frp
+  reviewed_at: '2026-09-09'
+- repo: fosrl/pangolin
+  decision: needs-review
+  suitable_for:
+  - 基于身份和策略访问内部服务的场景
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: Community、Enterprise 与 Cloud 的功能和许可证边界需要逐项核对。
+  evidence_urls:
+  - https://github.com/fosrl/pangolin
+  reviewed_at: '2026-09-09'
+- repo: go-gost/gost
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/go-gost/gost
+  reviewed_at: '2026-09-09'
+- repo: gravitational/teleport
+  decision: needs-review
+  suitable_for:
+  - 基于身份和策略访问内部服务的场景
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 源码目录与官方 Community Edition 构建存在不同许可证边界。
+  evidence_urls:
+  - https://github.com/gravitational/teleport
+  reviewed_at: '2026-09-09'
+- repo: jpillora/chisel
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/jpillora/chisel
+  reviewed_at: '2026-09-09'
+- repo: localtunnel/localtunnel
+  decision: needs-review
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 当前仓库主要是客户端，完整自托管还涉及独立 server 仓库。
+  evidence_urls:
+  - https://github.com/localtunnel/localtunnel
+  reviewed_at: '2026-09-09'
+- repo: netbirdio/netbird
+  decision: needs-review
+  suitable_for:
+  - 基于身份和策略访问内部服务的场景
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 存在目录级混合许可证，且产品核心更接近覆盖网络。
+  evidence_urls:
+  - https://github.com/netbirdio/netbird
+  reviewed_at: '2026-09-09'
+- repo: NginxProxyManager/nginx-proxy-manager
+  decision: accepted
+  suitable_for:
+  - 希望通过 Web 界面管理反代、证书和路由的自托管用户
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/NginxProxyManager/nginx-proxy-manager
+  reviewed_at: '2026-09-09'
+- repo: oauth2-proxy/oauth2-proxy
+  decision: accepted
+  suitable_for:
+  - 基于身份和策略访问内部服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/oauth2-proxy/oauth2-proxy
+  reviewed_at: '2026-09-09'
+- repo: openziti/ziti
+  decision: needs-review
+  suitable_for:
+  - 基于身份和策略访问内部服务的场景
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 控制器/路由器还依赖隧道器等项目族组件，反代边界需要进一步证明。
+  evidence_urls:
+  - https://github.com/openziti/ziti
+  reviewed_at: '2026-09-09'
+- repo: openziti/zrok
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/openziti/zrok
+  reviewed_at: '2026-09-09'
+- repo: pomerium/pomerium
+  decision: accepted
+  suitable_for:
+  - 基于身份和策略访问内部服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/pomerium/pomerium
+  reviewed_at: '2026-09-09'
+- repo: rathole-org/rathole
+  decision: accepted
+  suitable_for:
+  - 需要从 NAT 或防火墙后安全暴露服务的场景
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/rathole-org/rathole
+  reviewed_at: '2026-09-09'
+- repo: tailscale/tailscale
+  decision: needs-review
+  suitable_for:
+  - 基于身份和策略访问内部服务的场景
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: Serve/Funnel 是组网产品的子功能，且默认依赖托管控制面。
+  evidence_urls:
+  - https://github.com/tailscale/tailscale
+  reviewed_at: '2026-09-09'
+- repo: tobychui/zoraxy
+  decision: accepted
+  suitable_for:
+  - 希望通过 Web 界面管理反代、证书和路由的自托管用户
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 AGPL-3.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/tobychui/zoraxy
+  reviewed_at: '2026-09-09'
+- repo: yusing/godoxy
+  decision: needs-review
+  suitable_for:
+  - 希望通过 Web 界面管理反代、证书和路由的自托管用户
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: GitHub API 返回的许可证为 NOASSERTION，需核对实际 LICENSE、子目录和发行物授权后再决定。
+  evidence_urls:
+  - https://github.com/yusing/godoxy
+  reviewed_at: '2026-09-09'

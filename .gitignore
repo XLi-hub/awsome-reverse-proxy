@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# GitHub API 的本地响应缓存可能包含私有请求上下文，不提交仓库。
+.cache/

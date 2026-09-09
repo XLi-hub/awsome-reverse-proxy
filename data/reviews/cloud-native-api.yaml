@@ -1,0 +1,270 @@
+- repo: apache/apisix
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/apache/apisix
+  reviewed_at: '2026-09-09'
+- repo: apache/apisix-ingress-controller
+  decision: accepted
+  suitable_for:
+  - Kubernetes 集群入口与 Gateway API/Ingress 管理
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/apache/apisix-ingress-controller
+  reviewed_at: '2026-09-09'
+- repo: apache/shenyu
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/apache/shenyu
+  reviewed_at: '2026-09-09'
+- repo: cilium/cilium
+  decision: needs-review
+  suitable_for:
+  - 服务网格边界及多集群入口/出口流量治理
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 主体是 Kubernetes 网络与安全平台，需要进一步确认入口网关的独立收录边界。
+  evidence_urls:
+  - https://github.com/cilium/cilium
+  reviewed_at: '2026-09-09'
+- repo: easegress-io/easegress
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/easegress-io/easegress
+  reviewed_at: '2026-09-09'
+- repo: emissary-ingress/emissary
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/emissary-ingress/emissary
+  reviewed_at: '2026-09-09'
+- repo: envoyproxy/ai-gateway
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/envoyproxy/ai-gateway
+  reviewed_at: '2026-09-09'
+- repo: envoyproxy/envoy
+  decision: accepted
+  suitable_for:
+  - 需要动态配置和服务发现的云原生数据平面
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/envoyproxy/envoy
+  reviewed_at: '2026-09-09'
+- repo: envoyproxy/gateway
+  decision: accepted
+  suitable_for:
+  - Kubernetes 集群入口与 Gateway API/Ingress 管理
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/envoyproxy/gateway
+  reviewed_at: '2026-09-09'
+- repo: flomesh-io/pipy
+  decision: needs-review
+  suitable_for:
+  - 需要动态配置和服务发现的云原生数据平面
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: GitHub API 返回的许可证为 NOASSERTION，需核对实际 LICENSE、子目录和发行物授权后再决定。
+  evidence_urls:
+  - https://github.com/flomesh-io/pipy
+  reviewed_at: '2026-09-09'
+- repo: gravitee-io/gravitee-api-management
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/gravitee-io/gravitee-api-management
+  reviewed_at: '2026-09-09'
+- repo: haproxytech/kubernetes-ingress
+  decision: accepted
+  suitable_for:
+  - Kubernetes 集群入口与 Gateway API/Ingress 管理
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/haproxytech/kubernetes-ingress
+  reviewed_at: '2026-09-09'
+- repo: higress-group/higress
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/higress-group/higress
+  reviewed_at: '2026-09-09'
+- repo: istio/istio
+  decision: needs-review
+  suitable_for:
+  - 服务网格边界及多集群入口/出口流量治理
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 主体是服务网格控制平面，需要把网关能力与整个项目的范围区分开。
+  evidence_urls:
+  - https://github.com/istio/istio
+  reviewed_at: '2026-09-09'
+- repo: jcmoraisjr/haproxy-ingress
+  decision: accepted
+  suitable_for:
+  - Kubernetes 集群入口与 Gateway API/Ingress 管理
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/jcmoraisjr/haproxy-ingress
+  reviewed_at: '2026-09-09'
+- repo: kgateway-dev/kgateway
+  decision: needs-review
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 存在 Gloo 更名及 agentgateway 拆仓历史，需要冻结当前项目边界。
+  evidence_urls:
+  - https://github.com/kgateway-dev/kgateway
+  reviewed_at: '2026-09-09'
+- repo: Kong/kong
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/Kong/kong
+  reviewed_at: '2026-09-09'
+- repo: Kong/kubernetes-ingress-controller
+  decision: needs-review
+  suitable_for:
+  - Kubernetes 集群入口与 Gateway API/Ingress 管理
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 新功能路线正在转向 Kong Operator，需要核对支持周期和迁移关系。
+  evidence_urls:
+  - https://github.com/Kong/kubernetes-ingress-controller
+  reviewed_at: '2026-09-09'
+- repo: krakend/krakend-ce
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/krakend/krakend-ce
+  reviewed_at: '2026-09-09'
+- repo: kumahq/kuma
+  decision: needs-review
+  suitable_for:
+  - 服务网格边界及多集群入口/出口流量治理
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 需要区分内置网关和委托网关的数据平面责任。
+  evidence_urls:
+  - https://github.com/kumahq/kuma
+  reviewed_at: '2026-09-09'
+- repo: mosn/mosn
+  decision: accepted
+  suitable_for:
+  - 需要动态配置和服务发现的云原生数据平面
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/mosn/mosn
+  reviewed_at: '2026-09-09'
+- repo: nginx/kubernetes-ingress
+  decision: accepted
+  suitable_for:
+  - Kubernetes 集群入口与 Gateway API/Ingress 管理
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/nginx/kubernetes-ingress
+  reviewed_at: '2026-09-09'
+- repo: projectcontour/contour
+  decision: accepted
+  suitable_for:
+  - Kubernetes 集群入口与 Gateway API/Ingress 管理
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/projectcontour/contour
+  reviewed_at: '2026-09-09'
+- repo: spring-cloud/spring-cloud-gateway
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/spring-cloud/spring-cloud-gateway
+  reviewed_at: '2026-09-09'
+- repo: ThreeMammals/Ocelot
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 MIT。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/ThreeMammals/Ocelot
+  reviewed_at: '2026-09-09'
+- repo: TykTechnologies/tyk
+  decision: needs-review
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 审核阻断项尚未解除，不作为正式推荐展示。
+  review_notes: 开源网关、ee 目录和商业管理面的许可证与功能边界需要拆分。
+  evidence_urls:
+  - https://github.com/TykTechnologies/tyk
+  reviewed_at: '2026-09-09'
+- repo: wso2/product-apim
+  decision: accepted
+  suitable_for:
+  - 需要鉴权、限流、路由和插件治理的 API 入口
+  limitations:
+  - 具体协议、插件、部署方式和版本兼容性随版本变化，采用前需核对官方文档。
+  review_notes: 已核对 GitHub 规范上游、仓库状态和许可证元数据：非归档、非 Fork，License 为 Apache-2.0。官方仓库定位与候选说明一致，进入首轮正式目录。
+  evidence_urls:
+  - https://github.com/wso2/product-apim
+  reviewed_at: '2026-09-09'

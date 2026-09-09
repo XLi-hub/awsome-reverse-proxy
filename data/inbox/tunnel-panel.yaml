@@ -1,0 +1,263 @@
+- repo: fatedier/frp
+  name: frp
+  category: reverse-tunnel
+  description_zh: 面向 NAT 与防火墙后服务暴露的客户端/服务端反向代理与内网穿透工具。
+  tags: [tcp, udp, http, https, nat-traversal]
+  why_candidate: 反向代理是项目核心用途，协议覆盖面和部署文档较完整，适合作为通用内网穿透基准候选。
+  source_queries:
+    - 'topic:reverse-proxy topic:nat-traversal archived:false fork:false'
+    - '"reverse proxy" "behind a NAT" in:description'
+  status: candidate
+
+- repo: rathole-org/rathole
+  name: rathole
+  category: reverse-tunnel
+  description_zh: 使用 Rust 实现的轻量反向隧道，面向将 NAT 后的 TCP 服务映射到公网服务器。
+  tags: [tcp, tls, noise, rust, nat-traversal]
+  why_candidate: 项目聚焦反向端口转发，提供加密、热重载和小体积部署能力，定位与本分类高度一致。
+  source_queries:
+    - 'topic:reverse-tunnel language:Rust archived:false fork:false'
+    - 'frp alternative NAT traversal reverse proxy'
+  status: candidate
+
+- repo: jpillora/chisel
+  name: Chisel
+  category: reverse-tunnel
+  description_zh: 通过 HTTP 传输并使用 SSH 加密的单文件 TCP/UDP 隧道，支持反向端口转发。
+  tags: [tcp, udp, http, ssh, reverse-port-forwarding]
+  why_candidate: 客户端和服务端共用单一可执行文件，明确支持反向转发、多端点复用及自动重连。
+  source_queries:
+    - 'topic:tunnel reverse-port-forwarding http ssh'
+    - 'TCP UDP tunnel over HTTP reverse forwarding'
+  status: candidate
+
+- repo: erebe/wstunnel
+  name: wstunnel
+  category: reverse-tunnel
+  description_zh: 以 WebSocket 或 HTTP/2 为传输层的 TCP、UDP 和 Unix Socket 隧道工具。
+  tags: [websocket, http2, tcp, udp, mtls]
+  why_candidate: 同时覆盖静态与动态反向隧道，并提供 TLS、mTLS、代理协议和静态二进制发布。
+  source_queries:
+    - 'topic:reverse-tunnel websocket http2 language:Rust'
+    - 'WebSocket HTTP2 reverse TCP UDP tunnel'
+  status: candidate
+
+- repo: ekzhang/bore
+  name: bore
+  category: reverse-tunnel
+  description_zh: 用 Rust 编写的简洁 TCP 隧道，可将本地端口经自托管远端服务器公开。
+  tags: [tcp, rust, self-hosted, nat-traversal]
+  why_candidate: 项目范围小而清晰，客户端与服务端部署直接，适合作为纯 TCP 隧道的轻量候选。
+  source_queries:
+    - 'topic:tunnel language:Rust self-hosted localhost'
+    - 'simple TCP tunnel ngrok alternative self hosted'
+  status: candidate
+
+- repo: antoniomika/sish
+  name: sish
+  category: reverse-tunnel
+  description_zh: 基于标准 SSH 反向转发提供 HTTP、HTTPS、WebSocket、TCP 和 SNI 隧道的自托管服务。
+  tags: [ssh, http, tcp, websocket, sni]
+  why_candidate: 无需专用客户端即可建立多类隧道，并具备域名路由、认证和负载分配等服务端能力。
+  source_queries:
+    - 'topic:tunnel SSH HTTP TCP ngrok alternative'
+    - 'self-hosted SSH reverse tunnel SNI'
+  status: candidate
+
+- repo: localtunnel/localtunnel
+  name: localtunnel
+  category: reverse-tunnel
+  description_zh: 面向开发测试与 Webhook 调试的本地 HTTP 服务公开工具，支持连接自建隧道服务端。
+  tags: [http, nodejs, development, webhook, self-hosted]
+  why_candidate: 使用方式简单且生态成熟，是开发场景 HTTP 隧道的代表性实现，客户端支持自定义服务端。
+  source_queries:
+    - 'topic:localtunnel localhost public URL'
+    - 'self-hosted HTTP tunnel webhook development'
+  status: needs-review
+
+- repo: exposedev/expose
+  name: Expose
+  category: reverse-tunnel
+  description_zh: 使用 PHP 构建的开源 HTTP 隧道服务，支持自托管服务端和本地应用公开。
+  tags: [http, php, self-hosted, development, tunnel-server]
+  why_candidate: 同时提供客户端与自托管服务端实现，并以完整应用形式覆盖隧道管理和开发分享场景。
+  source_queries:
+    - 'topic:tunnel-server PHP self-hosted ngrok alternative'
+    - 'open source tunnel application expose localhost'
+  status: candidate
+
+- repo: cloudflare/cloudflared
+  name: cloudflared
+  category: reverse-tunnel
+  description_zh: Cloudflare Tunnel 的开源连接器，通过出站连接将私有服务接入 Cloudflare 网络。
+  tags: [http, tcp, quic, cloudflare, outbound-only]
+  why_candidate: 它是 Cloudflare Tunnel 的官方客户端，代表由托管边缘网络承载入口、源站无需开放入站端口的方案。
+  source_queries:
+    - 'topic:cloudflare-tunnel connector GitHub'
+    - 'Cloudflare Tunnel client expose private service'
+  status: needs-review
+
+- repo: openziti/zrok
+  name: zrok
+  category: reverse-tunnel
+  description_zh: 基于 OpenZiti 的安全资源分享与隧道工具，可公开或私密共享 Web、TCP、UDP 和文件资源。
+  tags: [http, tcp, udp, openziti, self-hosted]
+  why_candidate: 兼顾临时公开分享、私有访问和完整自托管，并将零信任覆盖网络用于穿越 NAT 与防火墙。
+  source_queries:
+    - 'topic:tunneling OpenZiti public private sharing'
+    - 'self-hosted secure internet sharing NAT firewall'
+  status: candidate
+
+- repo: go-gost/gost
+  name: GOST
+  category: reverse-tunnel
+  description_zh: 支持多种传输协议、转发链、反向代理和 TCP/UDP 内网穿透的通用隧道工具。
+  tags: [tcp, udp, websocket, quic, reverse-proxy]
+  why_candidate: 反向隧道是官方列出的主要工作模式之一，且具备多传输协议、路由控制和动态配置能力。
+  source_queries:
+    - 'topic:reverse-proxy topic:tunnel language:Go'
+    - 'GOST reverse proxy tunnel TCP UDP'
+  status: candidate
+
+- repo: pomerium/pomerium
+  name: Pomerium
+  category: zero-trust-access
+  description_zh: 面向内部 Web 应用和服务的身份与上下文感知反向代理，可按策略验证每次访问。
+  tags: [identity-aware-proxy, oidc, policy, http, beyondcorp]
+  why_candidate: 项目以身份感知访问代理为核心，提供客户端无感的内部应用入口和细粒度策略控制。
+  source_queries:
+    - 'topic:identity-aware-proxy topic:zero-trust'
+    - 'context aware reverse proxy internal applications'
+  status: candidate
+
+- repo: fosrl/pangolin
+  name: Pangolin
+  category: zero-trust-access
+  description_zh: 将隧道反向代理、私有网络连接和身份访问控制集成在一起的自托管访问平台。
+  tags: [identity-aware-proxy, wireguard, sso, tcp, udp]
+  why_candidate: 同一平台同时覆盖无需开放端口的资源接入、浏览器访问、身份认证和按资源授权。
+  source_queries:
+    - 'topic:tunneled-reverse-proxy identity access self-hosted'
+    - 'Pangolin reverse proxy VPN access control'
+  status: needs-review
+
+- repo: openziti/ziti
+  name: OpenZiti
+  category: zero-trust-access
+  description_zh: 以加密身份和服务级策略构建覆盖网络的零信任平台，可通过隧道器接入既有私有服务。
+  tags: [zero-trust, overlay-network, identity, mtls, self-hosted]
+  why_candidate: 项目提供完整可自托管控制面与数据面，支持让服务保持无公网监听并按身份授权访问。
+  source_queries:
+    - 'topic:zero-trust programmable network private service access'
+    - 'OpenZiti tunneler dark services self hosted'
+  status: needs-review
+
+- repo: gravitational/teleport
+  name: Teleport
+  category: zero-trust-access
+  description_zh: 为服务器、Kubernetes、数据库、桌面和内部 Web 应用提供统一身份访问代理与审计的平台。
+  tags: [identity-aware-proxy, ssh, kubernetes, database, audit]
+  why_candidate: 内置反向隧道可连接防火墙后的资源，并将短期凭证、细粒度权限与会话审计结合在统一入口。
+  source_queries:
+    - 'topic:zero-trust infrastructure access reverse tunnel'
+    - 'identity aware access proxy SSH Kubernetes database'
+  status: needs-review
+
+- repo: netbirdio/netbird
+  name: NetBird
+  category: zero-trust-access
+  description_zh: 基于 WireGuard 的自托管覆盖网络，将设备连接、身份登录和细粒度网络访问策略统一管理。
+  tags: [wireguard, overlay-network, sso, access-control, self-hosted]
+  why_candidate: 项目面向无需开放端口的私有资源访问，提供集中策略、路由节点和中继以覆盖复杂网络环境。
+  source_queries:
+    - 'topic:zero-trust WireGuard self-hosted access control'
+    - 'private network access without opening ports SSO'
+  status: needs-review
+
+- repo: oauth2-proxy/oauth2-proxy
+  name: OAuth2 Proxy
+  category: zero-trust-access
+  description_zh: 在上游应用前通过 OAuth 2.0 或 OpenID Connect 身份提供商执行认证的反向代理。
+  tags: [oauth2, oidc, sso, forward-auth, http]
+  why_candidate: 它可独立代理受保护上游，也可作为 Nginx 等网关的外部认证组件，是身份入口的代表性基础组件。
+  source_queries:
+    - 'topic:oauth2-proxy reverse proxy authentication'
+    - 'OIDC authentication proxy upstream applications'
+  status: candidate
+
+- repo: tailscale/tailscale
+  name: Tailscale
+  category: zero-trust-access
+  description_zh: 基于 WireGuard 的身份感知组网客户端，包含向私有网络或公网发布本地服务的 Serve 与 Funnel 能力。
+  tags: [wireguard, mesh-network, identity, serve, funnel]
+  why_candidate: 项目将设备身份、访问控制和服务反向代理集成到加密网络中，是托管控制面零信任入口的重要方案。
+  source_queries:
+    - 'Tailscale Serve Funnel reverse proxy GitHub'
+    - 'topic:wireguard identity access service exposure'
+  status: needs-review
+
+- repo: NginxProxyManager/nginx-proxy-manager
+  name: Nginx Proxy Manager
+  category: proxy-management-ui
+  description_zh: 通过 Web 界面管理 Nginx 代理主机、重定向、TCP/UDP 流和 TLS 证书的容器化工具。
+  tags: [nginx, webui, letsencrypt, docker, tcp]
+  why_candidate: 功能围绕反代主机和证书生命周期展开，安装与日常管理面向自托管用户，分类相关性直接。
+  source_queries:
+    - 'topic:proxy-manager nginx WebUI self-hosted'
+    - 'Nginx reverse proxy management interface certificates'
+  status: candidate
+
+- repo: 0xJacky/nginx-ui
+  name: Nginx UI
+  category: proxy-management-ui
+  description_zh: 用于编辑、验证和发布 Nginx 配置，并管理证书、日志和运行状态的跨平台 Web 管理界面。
+  tags: [nginx, webui, configuration, letsencrypt, monitoring]
+  why_candidate: 项目直接管理现有 Nginx 实例，包含配置检查、版本记录和证书自动化等运维闭环。
+  source_queries:
+    - 'topic:nginx topic:webui proxy configuration'
+    - 'Nginx WebUI configuration certificate management'
+  status: candidate
+
+- repo: tobychui/zoraxy
+  name: Zoraxy
+  category: proxy-management-ui
+  description_zh: 自带 Web 管理界面的通用 HTTP 反向代理与 TCP/UDP 转发工具。
+  tags: [webui, http, tcp, udp, access-control]
+  why_candidate: 项目不是单纯配置编辑器，而是将反代运行时、证书、访问控制、监控和管理界面整合在一起。
+  source_queries:
+    - 'topic:reverse-proxy WebUI self-hosted'
+    - 'reverse proxy forwarding tool management interface'
+  status: candidate
+
+- repo: bunkerity/bunkerweb
+  name: BunkerWeb
+  category: proxy-management-ui
+  description_zh: 基于 Nginx 的反向代理与 Web 应用防火墙平台，提供 Web 界面、自动配置和多种部署方式。
+  tags: [nginx, waf, webui, security, kubernetes]
+  why_candidate: 入口反代与安全策略是核心运行路径，并提供适合单机、容器和 Kubernetes 的集中管理界面。
+  source_queries:
+    - 'topic:reverse-proxy topic:waf WebUI'
+    - 'Nginx security reverse proxy management UI'
+  status: candidate
+
+- repo: azukaar/Cosmos-Server
+  name: Cosmos Server
+  category: proxy-management-ui
+  description_zh: 面向自托管服务器的可视化安全网关，集成反向代理、自动 HTTPS、认证和容器管理。
+  tags: [webui, reverse-proxy, sso, docker, tls]
+  why_candidate: 反代路由和身份保护是其应用入口核心能力，适合评估一体化家庭服务器网关这一产品形态。
+  source_queries:
+    - 'topic:reverse-proxy self-hosted server SSO WebUI'
+    - 'home server secure gateway reverse proxy interface'
+  status: needs-review
+
+- repo: yusing/godoxy
+  name: GoDoxy
+  category: proxy-management-ui
+  description_zh: 面向自托管和容器环境的反向代理，提供 Web 管理、容器自动发现、证书和访问控制。
+  tags: [webui, docker, podman, http, tcp]
+  why_candidate: 项目以带 WebUI 的反向代理为明确定位，并覆盖路由发现、证书、日志、指标和 TCP/UDP 转发。
+  source_queries:
+    - 'topic:reverse-proxy WebUI Docker discovery'
+    - 'self-hosted proxy container orchestrator management UI'
+  status: needs-review
