@@ -1,7 +1,7 @@
 - repo: Unitech/pm2
   name: pm2
   description: Node.js/Typescript/Bun Production Process Manager with a built-in Load Balancer.
-  stars_at_discovery: 43292
+  stars_at_discovery: 43333
   language: JavaScript
   license_spdx: NOASSERTION
   topics:
@@ -17,19 +17,19 @@
   - production
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:load-balancer
   - metadata:load balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: songquanpeng/one-api
   name: one-api
   description: LLM API 管理 & 分发系统，支持 OpenAI、Azure、Anthropic Claude、Google Gemini、DeepSeek、字节豆包、ChatGLM、文心一言、讯飞星火、通义千问、360
     智脑、腾讯混元等主流模型，统一 API 适配，可用于 key 管理与二次分发。单可执行文件，提供 Docker 镜像，一键部署，开箱即用。LLM API management & key redistribution
     system, unifying multiple providers under a single API. Single binary, Docker-ready, with an English
     UI.
-  stars_at_discovery: 36789
+  stars_at_discovery: 37305
   language: JavaScript
   license_spdx: MIT
   topics:
@@ -46,16 +46,16 @@
   - proxy
   found_by:
   - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:api-gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: hashicorp/consul
   name: consul
   description: Consul is a distributed, highly available, and data center aware solution to connect and
     configure applications across dynamic, distributed infrastructure.
-  stars_at_discovery: 30060
+  stars_at_discovery: 30098
   language: Go
   license_spdx: NOASSERTION
   topics:
@@ -68,16 +68,16 @@
   - vault
   found_by:
   - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:api-gateway
   - topic:service-mesh
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: goauthentik/authentik
   name: authentik
   description: The authentication glue you need.
-  stars_at_discovery: 25407
+  stars_at_discovery: 26184
   language: Python
   license_spdx: NOASSERTION
   topics:
@@ -100,16 +100,16 @@
   - sso
   found_by:
   - topic:reverse-proxy archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-proxy
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: chaitin/SafeLine
   name: SafeLine
   description: SafeLine is a self-hosted WAF(Web Application Firewall) / reverse proxy to protect your
     web apps from attacks and exploits.
-  stars_at_discovery: 22536
+  stars_at_discovery: 23132
   language: Go
   license_spdx: GPL-3.0
   topics:
@@ -135,18 +135,18 @@
   - xss
   found_by:
   - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:api-gateway
   - metadata:reverse proxy
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: snail007/goproxy
   name: goproxy
   description: 🔥  Proxy is a high performance HTTP(S) proxies, SOCKS5 proxies,WEBSOCKET, TCP, UDP proxy
     server implemented by golang. Now, it supports chain-style proxies,nat forwarding in different lan,TCP/UDP
     port forwarding, SSH forwarding.Proxy是golang实现的高性能http,https,websocket,tcp,socks5代理服务器,支持内网穿透,链式代理,通讯加密,智能HTTP,SOCKS5代理,黑白名单,限速,限流量,限连接数,跨平台,KCP支持,认证API。
-  stars_at_discovery: 17131
+  stars_at_discovery: 17147
   language: Go
   license_spdx: GPL-3.0
   topics:
@@ -172,41 +172,16 @@
   - websocket-proxy
   found_by:
   - topic:reverse-proxy archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:reverse-proxy
   - topic:tcp-proxy
-- repo: Miserlou/Zappa
-  name: Zappa
-  description: Serverless Python
-  stars_at_discovery: 11817
-  language: Python
-  license_spdx: MIT
-  topics:
-  - api-gateway
-  - aws-lambda
-  - bottle
-  - django
-  - flask
-  - lambda
-  - pyramid
-  - python
-  - serverless
-  - serverless-framework
-  - zappa
-  found_by:
-  - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:api-gateway
 - repo: go-resty/resty
   name: resty
   description: Simple HTTP, REST, and SSE client library for Go
-  stars_at_discovery: 11790
+  stars_at_discovery: 11824
   language: Go
   license_spdx: MIT
   topics:
@@ -232,15 +207,77 @@
   - sse-client
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:load-balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: Miserlou/Zappa
+  name: Zappa
+  description: Serverless Python
+  stars_at_discovery: 11812
+  language: Python
+  license_spdx: MIT
+  topics:
+  - api-gateway
+  - aws-lambda
+  - bottle
+  - django
+  - flask
+  - lambda
+  - pyramid
+  - python
+  - serverless
+  - serverless-framework
+  - zappa
+  found_by:
+  - topic:api-gateway archived:false fork:false stars:>=100
+  relevance_score: 3
+  matched_signals:
+  - topic:api-gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: maximhq/bifrost
+  name: bifrost
+  description: Open-source, high-performance AI gateway that works as your LLM gateway, MCP gateway and
+    agent gateway. One OpenAI-compatible API for 10,000+ models, with failover, load balancing, semantic
+    caching, virtual keys, budgets and MCP Code Mode. Works with any SDK or agent and adds under 200µs
+    of overhead at 5k RPS.
+  stars_at_discovery: 9262
+  language: Go
+  license_spdx: Apache-2.0
+  topics:
+  - agent-gateway
+  - ai-gateway
+  - ai-governance
+  - api-gateway
+  - claude-code
+  - coding-agents
+  - failover
+  - gateway
+  - guardrails
+  - llm-cost
+  - llm-gateway
+  - llm-observability
+  - llm-proxy
+  - llm-router
+  - load-balancing
+  - mcp-gateway
+  - model-context-protocol
+  - model-router
+  - openai-compatible
+  - semantic-cache
+  found_by:
+  - topic:api-gateway archived:false fork:false stars:>=100
+  relevance_score: 3
+  matched_signals:
+  - topic:api-gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: apex/up
   name: up
   description: Deploy infinitely scalable serverless apps, apis, and sites in seconds to AWS.
-  stars_at_discovery: 8792
+  stars_at_discovery: 8796
   language: Go
   license_spdx: MIT
   topics:
@@ -264,15 +301,15 @@
   - up
   found_by:
   - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:api-gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: metallb/metallb
   name: metallb
   description: A network load-balancer implementation for Kubernetes using standard routing protocols
-  stars_at_discovery: 8344
+  stars_at_discovery: 8392
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -287,71 +324,17 @@
   - vrrp
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:load-balancer
   - metadata:load balancer
-- repo: luraproject/lura
-  name: lura
-  description: Ultra performant API Gateway with middlewares. A project hosted at The Linux Foundation
-  stars_at_discovery: 6794
-  language: Go
-  license_spdx: NOASSERTION
-  topics:
-  - api-gateway
-  - apis
-  - backend-services
-  - gateway
-  - gateway-api
-  - go
-  - golang
-  - krakend
-  - load-balancer
-  - microservice
-  - middleware
-  - proxies
-  - router
-  found_by:
-  - topic:load-balancer archived:false fork:false stars:>=100
-  - topic:api-gateway archived:false fork:false stars:>=100
-  - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 9
-  matched_signals:
-  - topic:api-gateway
-  - topic:gateway-api
-  - topic:load-balancer
-  - metadata:api gateway
-- repo: aws/aws-sam-cli
-  name: aws-sam-cli
-  description: CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
-  stars_at_discovery: 6732
-  language: Python
-  license_spdx: Apache-2.0
-  topics:
-  - api-gateway
-  - aws
-  - docker
-  - lambda
-  - python
-  - sam
-  - serverless
-  - serverlessapplicationmodel
-  found_by:
-  - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:api-gateway
 - repo: tbphp/gpt-load
   name: gpt-load
   description: Self-hosted AI gateway for multi-channel, multi-credential setups — API keys and subscription
     accounts, scheduling, failover, request logs and usage. 自托管 AI 网关：多渠道多凭据统一接入，含密钥与订阅账号、调度容错、日志与用量。
-  stars_at_discovery: 6576
+  stars_at_discovery: 7192
   language: Go
   license_spdx: MIT
   topics:
@@ -373,16 +356,70 @@
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
   - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:api-gateway
   - topic:load-balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: luraproject/lura
+  name: lura
+  description: Ultra performant API Gateway with middlewares. A project hosted at The Linux Foundation
+  stars_at_discovery: 6802
+  language: Go
+  license_spdx: NOASSERTION
+  topics:
+  - api-gateway
+  - apis
+  - backend-services
+  - gateway
+  - gateway-api
+  - go
+  - golang
+  - krakend
+  - load-balancer
+  - microservice
+  - middleware
+  - proxies
+  - router
+  found_by:
+  - topic:load-balancer archived:false fork:false stars:>=100
+  - topic:api-gateway archived:false fork:false stars:>=100
+  - topic:gateway-api archived:false fork:false stars:>=100
+  relevance_score: 9
+  matched_signals:
+  - topic:api-gateway
+  - topic:gateway-api
+  - topic:load-balancer
+  - metadata:api gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: aws/aws-sam-cli
+  name: aws-sam-cli
+  description: CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
+  stars_at_discovery: 6740
+  language: Python
+  license_spdx: Apache-2.0
+  topics:
+  - api-gateway
+  - aws
+  - docker
+  - lambda
+  - python
+  - sam
+  - serverless
+  - serverlessapplicationmodel
+  found_by:
+  - topic:api-gateway archived:false fork:false stars:>=100
+  relevance_score: 3
+  matched_signals:
+  - topic:api-gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: bfenetworks/bfe
   name: bfe
   description: A modern layer 7 load balancer from baidu
-  stars_at_discovery: 6259
+  stars_at_discovery: 6272
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -394,40 +431,20 @@
   found_by:
   - topic:reverse-proxy archived:false fork:false stars:>=100
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 9
   matched_signals:
   - topic:load-balancer
   - topic:reverse-proxy
   - metadata:load balancer
-- repo: snailyp/gemini-balance
-  name: gemini-balance
-  description: Gemini polling proxy service （gemini轮询代理服务）
-  stars_at_discovery: 5817
-  language: Python
-  license_spdx: NOASSERTION
-  topics:
-  - gemini
-  - gemini-api
-  - googlesearch
-  - imagen-3
-  - load-balancer
-  - openai-api
-  found_by:
-  - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:load-balancer
 - repo: oomol-lab/open-connector
   name: open-connector
-  description: Open-source auth gateway connecting 1400+ SaaS providers to AI agents through SDK, CLI,
+  description: Open-source auth gateway connecting 1500+ SaaS providers to AI agents through SDK, CLI,
     MCP, HTTP, and OpenAPI.
-  stars_at_discovery: 5639
+  stars_at_discovery: 6156
   language: TypeScript
-  license_spdx: Apache-2.0
+  license_spdx: NOASSERTION
   topics:
   - agent-tools
   - ai-agents
@@ -449,15 +466,64 @@
   - typescript
   found_by:
   - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:api-gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: agentgateway/agentgateway
+  name: agentgateway
+  description: Next Generation Agentic Proxy for AI Agents and MCP servers
+  stars_at_discovery: 5842
+  language: Rust
+  license_spdx: Apache-2.0
+  topics:
+  - agents
+  - ai
+  - ai-gateway
+  - api-gateway
+  - gateway-api
+  - kubernetes
+  - mcp
+  - mcp-gateway
+  - reverse-proxy
+  - rust
+  - service-mesh
+  found_by:
+  - topic:api-gateway archived:false fork:false stars:>=100
+  - topic:gateway-api archived:false fork:false stars:>=100
+  relevance_score: 6
+  matched_signals:
+  - topic:api-gateway
+  - topic:gateway-api
+  - topic:reverse-proxy
+  - topic:service-mesh
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: snailyp/gemini-balance
+  name: gemini-balance
+  description: Gemini polling proxy service （gemini轮询代理服务）
+  stars_at_discovery: 5783
+  language: Python
+  license_spdx: NOASSERTION
+  topics:
+  - gemini
+  - gemini-api
+  - googlesearch
+  - imagen-3
+  - load-balancer
+  - openai-api
+  found_by:
+  - topic:load-balancer archived:false fork:false stars:>=100
+  relevance_score: 3
+  matched_signals:
+  - topic:load-balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: pgdogdev/pgdog
   name: pgdog
   description: PostgreSQL connection pooler, load balancer and database sharder.
-  stars_at_discovery: 5468
+  stars_at_discovery: 5592
   language: Rust
   license_spdx: AGPL-3.0
   topics:
@@ -468,55 +534,19 @@
   - sharding
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:load-balancer
   - metadata:load balancer
-- repo: CodeGenieApp/serverless-express
-  name: serverless-express
-  description: Run Express and other Node.js frameworks on AWS Serverless technologies such as Lambda,
-    API Gateway, Lambda@Edge, and more.
-  stars_at_discovery: 5262
-  language: JavaScript
-  license_spdx: Apache-2.0
-  topics:
-  - alb
-  - api-gateway
-  - aws
-  - aws-lambda
-  - aws-serverless
-  - dynamodb
-  - express
-  - express-js
-  - expressjs
-  - hacktoberfest
-  - lambda
-  - node
-  - node-js
-  - nodejs
-  - sam
-  - serverless
-  - serverless-applications
-  - serverless-express
-  - serverless-framework
-  - vendia
-  found_by:
-  - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 6
-  matched_signals:
-  - topic:api-gateway
-  - metadata:api gateway
 - repo: looplj/axonhub
   name: axonhub
   description: ⚡️ Open-source AI Gateway — Use any SDK to call 100+ LLMs. Built-in failover, load balancing,
     cost control & end-to-end tracing.
-  stars_at_discovery: 5182
+  stars_at_discovery: 5419
   language: Go
-  license_spdx: NOASSERTION
+  license_spdx: Apache-2.0
   topics:
   - agent
   - agents
@@ -535,68 +565,15 @@
   - opencode
   found_by:
   - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:api-gateway
-- repo: DocsHome/microservices
-  name: microservices
-  description: Microservices from Design to Deployment 中文版 《微服务：从设计到部署》
-  stars_at_discovery: 5167
-  language: null
-  license_spdx: null
-  topics:
-  - api-gateway
-  - book
-  - chinese
-  - chinese-translation
-  - cloud
-  - ebook
-  - ipc
-  - microservice
-  - microservices
-  - nginx
-  - translation
-  found_by:
-  - topic:api-gateway archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:api-gateway
-- repo: agentgateway/agentgateway
-  name: agentgateway
-  description: Next Generation Agentic Proxy for AI Agents and MCP servers
-  stars_at_discovery: 4767
-  language: Rust
-  license_spdx: Apache-2.0
-  topics:
-  - agents
-  - ai
-  - ai-gateway
-  - api-gateway
-  - gateway-api
-  - kubernetes
-  - mcp
-  - mcp-gateway
-  - reverse-proxy
-  - rust
-  - service-mesh
-  found_by:
-  - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
-  relevance_score: 6
-  matched_signals:
-  - topic:api-gateway
-  - topic:gateway-api
-  - topic:reverse-proxy
-  - topic:service-mesh
 - repo: kubernetes-sigs/aws-load-balancer-controller
   name: aws-load-balancer-controller
   description: A Kubernetes controller for Elastic Load Balancers
-  stars_at_discovery: 4326
+  stars_at_discovery: 4343
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -609,18 +586,18 @@
   - kubernetes-ingress-controller
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:gateway-api
   - metadata:load balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: octelium/octelium
   name: octelium
   description: A next-gen FOSS self-hosted unified zero trust secure access platform that can operate
     as a remote access VPN, a ZTNA platform, API/AI/MCP gateway, a PaaS, an ngrok-alternative and a homelab
     infrastructure.
-  stars_at_discovery: 4042
+  stars_at_discovery: 4145
   language: Go
   license_spdx: AGPL-3.0
   topics:
@@ -646,16 +623,16 @@
   - ztna
   found_by:
   - '"identity aware proxy" in:name,description,readme archived:false fork:false stars:>=50'
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:api-gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: leandromoreira/cdn-up-and-running
   name: cdn-up-and-running
   description: CDN Up and Running - Building a CDN from Scratch to Learn about CDN, Nginx, Lua, Prometheus,
     Grafana, Load balancing, and Containers.
-  stars_at_discovery: 3696
+  stars_at_discovery: 3712
   language: Lua
   license_spdx: BSD-3-Clause
   topics:
@@ -673,16 +650,16 @@
   - wrk
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:load-balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: pgrok/pgrok
   name: pgrok
   description: Poor man's ngrok - a multi-tenant HTTP/TCP reverse tunnel solution through SSH remote port
     forwarding
-  stars_at_discovery: 3645
+  stars_at_discovery: 3646
   language: Go
   license_spdx: MIT
   topics:
@@ -697,16 +674,47 @@
   - tcp
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:reverse-tunnel
   - metadata:reverse tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: Soju06/codex-lb
+  name: codex-lb
+  description: Codex/ChatGPT multiple account load balancer & proxy with usage tracking, dashboard, and
+    OpenCode-compatible endpoints
+  stars_at_discovery: 3411
+  language: Python
+  license_spdx: MIT
+  topics:
+  - api-proxy
+  - chatgpt
+  - codex
+  - dashboard
+  - fastapi
+  - load-balancer
+  - multiple-accounts
+  - oauth
+  - openai
+  - openclaw
+  - opencode
+  - python
+  - rate-limit
+  - sqlalchemy
+  - usage-tracking
+  found_by:
+  - topic:load-balancer archived:false fork:false stars:>=100
+  relevance_score: 6
+  matched_signals:
+  - topic:load-balancer
+  - metadata:load balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: iqiyi/dpvs
   name: dpvs
   description: DPVS is a high performance Layer-4 load balancer based on DPDK.
-  stars_at_discovery: 3242
+  stars_at_discovery: 3248
   language: C
   license_spdx: NOASSERTION
   topics:
@@ -721,16 +729,16 @@
   - snat
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:load-balancer
   - metadata:load balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: amalshaji/portr
   name: portr
   description: Expose local http, tcp or websocket connections to the public internet
-  stars_at_discovery: 3185
+  stars_at_discovery: 3194
   language: Go
   license_spdx: AGPL-3.0
   topics:
@@ -752,47 +760,16 @@
   - tunneling
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-tunnel
-- repo: Soju06/codex-lb
-  name: codex-lb
-  description: Codex/ChatGPT multiple account load balancer & proxy with usage tracking, dashboard, and
-    OpenCode-compatible endpoints
-  stars_at_discovery: 3024
-  language: Python
-  license_spdx: MIT
-  topics:
-  - api-proxy
-  - chatgpt
-  - codex
-  - dashboard
-  - fastapi
-  - load-balancer
-  - multiple-accounts
-  - oauth
-  - openai
-  - openclaw
-  - opencode
-  - python
-  - rate-limit
-  - sqlalchemy
-  - usage-tracking
-  found_by:
-  - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 6
-  matched_signals:
-  - topic:load-balancer
-  - metadata:load balancer
 - repo: kubernetes-sigs/gateway-api
   name: gateway-api
   description: Repository for the next iteration of composite service (e.g. Ingress) and load balancing
     APIs.
-  stars_at_discovery: 2994
+  stars_at_discovery: 3042
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -803,16 +780,16 @@
   - sig-network
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:gateway-api
   - metadata:gateway api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: kube-vip/kube-vip
   name: kube-vip
   description: Kubernetes Control Plane Virtual IP and Load-Balancer
-  stars_at_discovery: 2950
+  stars_at_discovery: 2993
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -830,16 +807,16 @@
   - vip
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:load-balancer
   - metadata:load balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: webserver-llc/angie
   name: angie
   description: Angie - drop-in replacement for nginx
-  stars_at_discovery: 2567
+  stars_at_discovery: 2608
   language: C
   license_spdx: BSD-2-Clause
   topics:
@@ -854,16 +831,16 @@
   - reverse-proxy
   found_by:
   - topic:load-balancer archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:load-balancer
   - topic:reverse-proxy
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: ChrispyBacon-dev/DockFlare
   name: DockFlare
   description: 'DockFlare: Automate Cloudflare Tunnels with Docker Labels'
-  stars_at_discovery: 2433
+  stars_at_discovery: 2492
   language: Python
   license_spdx: NOASSERTION
   topics:
@@ -889,17 +866,17 @@
   - zero-trust
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:ingress-controller
   - topic:reverse-proxy
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: STRRL/cloudflare-tunnel-ingress-controller
   name: cloudflare-tunnel-ingress-controller
   description: 🚀 Expose the website directly into the internet! The Kuberntes Ingress Controller based
     on Cloudflare Tunnel.
-  stars_at_discovery: 1194
+  stars_at_discovery: 1205
   language: Go
   license_spdx: MIT
   topics:
@@ -911,17 +888,17 @@
   - selfhosted
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:ingress-controller
   - metadata:ingress controller
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: nginx/nginx-gateway-fabric
   name: nginx-gateway-fabric
   description: NGINX Gateway Fabric provides an implementation for the Gateway API using NGINX as the
     data plane.
-  stars_at_discovery: 1161
+  stars_at_discovery: 1187
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -931,16 +908,36 @@
   - nginx
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:gateway-api
   - metadata:gateway api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: n42-gateway/n42-gateway
+  name: n42-gateway
+  description: N42 Gateway
+  stars_at_discovery: 1175
+  language: Go
+  license_spdx: Apache-2.0
+  topics:
+  - gateway-api
+  - haproxy
+  - ingress-controller
+  - kubernetes
+  found_by:
+  - topic:ingress-controller archived:false fork:false stars:>=100
+  - topic:gateway-api archived:false fork:false stars:>=100
+  relevance_score: 6
+  matched_signals:
+  - topic:gateway-api
+  - topic:ingress-controller
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: apollographql/router
   name: router
   description: A configurable, high-performance routing runtime for Apollo Federation 🚀
-  stars_at_discovery: 972
+  stars_at_discovery: 984
   language: Rust
   license_spdx: NOASSERTION
   topics:
@@ -953,15 +950,15 @@
   - graphql
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:gateway-api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: hashicorp/consul-k8s
   name: consul-k8s
   description: First-class support for Consul Service Mesh on Kubernetes
-  stars_at_discovery: 707
+  stars_at_discovery: 709
   language: Go
   license_spdx: MPL-2.0
   topics:
@@ -977,17 +974,17 @@
   - vault
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:gateway-api
   - topic:service-mesh
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: Azure/application-gateway-kubernetes-ingress
   name: application-gateway-kubernetes-ingress
   description: This is an ingress controller that can be run on Azure Kubernetes Service (AKS) to allow
     an Azure Application Gateway to act as the ingress for an AKS cluster.
-  stars_at_discovery: 701
+  stars_at_discovery: 702
   language: Go
   license_spdx: MIT
   topics:
@@ -1001,17 +998,17 @@
   - kubernetes
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:ingress-controller
   - metadata:ingress controller
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: vsys-host/shkeeper.io
   name: shkeeper.io
   description: SHKeeper is a self-hosted and open-source cryptocurrency gateway payment processor. It's
     integrate with popular CMS, any e-commerce, your own code or product
-  stars_at_discovery: 614
+  stars_at_discovery: 637
   language: Python
   license_spdx: GPL-3.0
   topics:
@@ -1037,17 +1034,17 @@
   - self-hosted-api
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:gateway-api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: compumike/hairpin-proxy
   name: hairpin-proxy
   description: PROXY protocol support for internal-to-LoadBalancer traffic for Kubernetes Ingress users.
     If you've had problems with ingress-nginx, cert-manager, LetsEncrypt ACME HTTP01 self-check failures,
     and the PROXY protocol, read on.
-  stars_at_discovery: 602
+  stars_at_discovery: 601
   language: Ruby
   license_spdx: MIT
   topics:
@@ -1061,18 +1058,18 @@
   - proxy-protocol
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:ingress-controller
   - topic:load-balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: ReSearchITEng/kubeadm-playbook
   name: kubeadm-playbook
   description: Fully fledged (HA) Kubernetes Cluster using official kubeadm, ansible and helm. Tested
     on RHEL/CentOS/Ubuntu with support of http_proxy, dashboard installed, ingress controller, heapster
     - using official helm charts
-  stars_at_discovery: 596
+  stars_at_discovery: 597
   language: Shell
   license_spdx: Unlicense
   topics:
@@ -1092,57 +1089,18 @@
   - rhel
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:ingress-controller
   - metadata:ingress controller
-- repo: kubernetes-sigs/cloud-provider-kind
-  name: cloud-provider-kind
-  description: Cloud provider for KIND clusters
-  stars_at_discovery: 501
-  language: Go
-  license_spdx: Apache-2.0
-  topics:
-  - gateway-api
-  - ingress
-  - loadbalancer
-  - sig-network
-  found_by:
-  - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:gateway-api
-- repo: openNDS/openNDS
-  name: openNDS
-  description: openNDS (open Network Demarcation Service) is a high performance, small footprint, Captive
-    Portal.  It provides a border control gateway between a public local area network and the Internet.
-  stars_at_discovery: 491
-  language: C
-  license_spdx: GPL-2.0
-  topics:
-  - captive-portal
-  - captiveportal
-  - gateway-api
-  - gateway-iot-applications
-  - hotspot-user-management
-  - network-demarcation-service
-  found_by:
-  - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:gateway-api
 - repo: theplatformlab/CKA-Certified-Kubernetes-Administrator
   name: CKA-Certified-Kubernetes-Administrator
   description: CKA Certification Exam Guide 2026 — study notes, practice questions, kubectl cheat sheet,
     exam tips, and full Kubernetes v1.35 syllabus breakdown. Covers etcd backup, RBAC, kubeadm, Gateway
     API, NetworkPolicy, troubleshooting, and killer.sh prep. Scored 89%.
-  stars_at_discovery: 464
+  stars_at_discovery: 570
   language: Shell
   license_spdx: MIT
   topics:
@@ -1166,17 +1124,83 @@
   - kubernetes-troubleshooting
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:gateway-api
   - metadata:gateway api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: AminMGMT/BackPack
+  name: BackPack
+  description: BackPack is a high-performance tunnel engine for connecting Iran ⇄ abroad (kharej) servers
+  stars_at_discovery: 518
+  language: Go
+  license_spdx: AGPL-3.0
+  topics:
+  - backpack
+  - ip-spoof
+  - ip-spoofing
+  - ip-spoofing-tunnel
+  - kcp
+  - reverse-tunnel
+  - spoof
+  - tcp
+  - tunnel
+  - tunneling
+  - udp
+  - vpn
+  - websocket
+  found_by:
+  - topic:reverse-tunnel archived:false fork:false stars:>=50
+  relevance_score: 3
+  matched_signals:
+  - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: kubernetes-sigs/cloud-provider-kind
+  name: cloud-provider-kind
+  description: Cloud provider for KIND clusters
+  stars_at_discovery: 511
+  language: Go
+  license_spdx: Apache-2.0
+  topics:
+  - gateway-api
+  - ingress
+  - loadbalancer
+  - sig-network
+  found_by:
+  - topic:gateway-api archived:false fork:false stars:>=100
+  relevance_score: 3
+  matched_signals:
+  - topic:gateway-api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: openNDS/openNDS
+  name: openNDS
+  description: openNDS (open Network Demarcation Service) is a high performance, small footprint, Captive
+    Portal.  It provides a border control gateway between a public local area network and the Internet.
+  stars_at_discovery: 503
+  language: C
+  license_spdx: GPL-2.0
+  topics:
+  - captive-portal
+  - captiveportal
+  - gateway-api
+  - gateway-iot-applications
+  - hotspot-user-management
+  - network-demarcation-service
+  found_by:
+  - topic:gateway-api archived:false fork:false stars:>=100
+  relevance_score: 3
+  matched_signals:
+  - topic:gateway-api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: zZedix/Smite
   name: Smite
   description: Modern tunnel management built on GOST, Backhaul, FRP, Chisel and Rathole, featuring an
     intuitive WebUI, fast CLI, and open-source freedom.
-  stars_at_discovery: 438
+  stars_at_discovery: 444
   language: Python
   license_spdx: MIT
   topics:
@@ -1193,15 +1217,34 @@
   - xray-core
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: llm-d/llm-d-router
+  name: llm-d-router
+  description: 'llm-d Router: The intelligent entry point for inference requests'
+  stars_at_discovery: 440
+  language: Go
+  license_spdx: Apache-2.0
+  topics:
+  - ai
+  - gateway-api
+  - inference
+  - kubernetes
+  - networking
+  found_by:
+  - topic:gateway-api archived:false fork:false stars:>=100
+  relevance_score: 3
+  matched_signals:
+  - topic:gateway-api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: apioak/apioak
   name: apioak
   description: Full Lifecycle Management API Gateway.
-  stars_at_discovery: 416
+  stars_at_discovery: 414
   language: Lua
   license_spdx: Apache-2.0
   topics:
@@ -1224,18 +1267,18 @@
   - service-mesh
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 9
   matched_signals:
   - topic:api-gateway
   - topic:gateway-api
   - topic:service-mesh
   - metadata:api gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: F5Networks/k8s-bigip-ctlr
   name: k8s-bigip-ctlr
   description: Repository for F5 Container Ingress Services for Kubernetes & OpenShift.
-  stars_at_discovery: 400
+  stars_at_discovery: 401
   language: Python
   license_spdx: Apache-2.0
   topics:
@@ -1252,15 +1295,15 @@
   - tls
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:ingress-controller
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: zalando-incubator/kube-ingress-aws-controller
   name: kube-ingress-aws-controller
   description: Configures AWS Load Balancers according to Kubernetes Ingress resources
-  stars_at_discovery: 395
+  stars_at_discovery: 394
   language: Go
   license_spdx: MIT
   topics:
@@ -1274,35 +1317,16 @@
   - skipper
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:ingress-controller
   - metadata:load balancer
-- repo: llm-d/llm-d-router
-  name: llm-d-router
-  description: 'llm-d Router: The intelligent entry point for inference requests'
-  stars_at_discovery: 330
-  language: Go
-  license_spdx: Apache-2.0
-  topics:
-  - ai
-  - gateway-api
-  - inference
-  - kubernetes
-  - networking
-  found_by:
-  - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:gateway-api
 - repo: hrostami/aio-proxy
   name: aio-proxy
   description: This script automates setting up proxy related tools in Linux.
-  stars_at_discovery: 320
+  stars_at_discovery: 316
   language: Shell
   license_spdx: null
   topics:
@@ -1319,15 +1343,15 @@
   - x-ui
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: netscaler/netscaler-k8s-ingress-controller
   name: netscaler-k8s-ingress-controller
   description: 'NetScaler Ingress Controller for Kubernetes:'
-  stars_at_discovery: 318
+  stars_at_discovery: 315
   language: HCL
   license_spdx: null
   topics:
@@ -1344,46 +1368,18 @@
   - service-proxy
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 9
   matched_signals:
   - topic:api-gateway
   - topic:ingress-controller
   - topic:service-mesh
   - metadata:ingress controller
-- repo: AminMGMT/BackPack
-  name: BackPack
-  description: High Performance reverse tunnel engine in Go, built for edge ⇄ origin server setups
-  stars_at_discovery: 308
-  language: Go
-  license_spdx: AGPL-3.0
-  topics:
-  - backpack
-  - ip-spoof
-  - ip-spoofing
-  - ip-spoofing-tunnel
-  - kcp
-  - reverse-tunnel
-  - spoof
-  - tcp
-  - tunnel
-  - tunneling
-  - udp
-  - vpn
-  - websocket
-  found_by:
-  - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 6
-  matched_signals:
-  - topic:reverse-tunnel
-  - metadata:reverse tunnel
 - repo: ngrok/ngrok-operator
   name: ngrok-operator
   description: The official ngrok Kubernetes Operator
-  stars_at_discovery: 271
+  stars_at_discovery: 273
   language: Go
   license_spdx: MIT
   topics:
@@ -1396,14 +1392,14 @@
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:api-gateway
   - topic:gateway-api
   - topic:ingress-controller
   - topic:reverse-proxy
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: Azumi67/Chisel_multipleServers
   name: Chisel_multipleServers
   description: Establish a Reverse Tunnel between different servers and clients. IPV4 | IPV6 - Supports
@@ -1423,70 +1419,18 @@
   - wireguard
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:reverse-tunnel
   - metadata:reverse tunnel
-- repo: travisghansen/kubernetes-pfsense-controller
-  name: kubernetes-pfsense-controller
-  description: Integrate Kubernetes and pfSense
-  stars_at_discovery: 212
-  language: PHP
-  license_spdx: Apache-2.0
-  topics:
-  - api
-  - client
-  - cluster
-  - controller
-  - dns
-  - firewall
-  - haproxy
-  - haproxy-configuration
-  - ingress
-  - ingress-controller
-  - ingress-dns
-  - k8s
-  - kubernetes
-  - load-balancer
-  - metallb
-  - pfsense
-  - php
-  found_by:
-  - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 6
-  matched_signals:
-  - topic:ingress-controller
-  - topic:load-balancer
-- repo: haproxytech/helm-charts
-  name: helm-charts
-  description: Helm chart for HAProxy Kubernetes Ingress Controller
-  stars_at_discovery: 211
-  language: Shell
-  license_spdx: Apache-2.0
-  topics:
-  - haproxy
-  - helm-charts
-  - ingress-controller
-  - kubernetes
-  - kubernetes-cluster
-  found_by:
-  - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
-  relevance_score: 6
-  matched_signals:
-  - topic:ingress-controller
-  - metadata:ingress controller
 - repo: inference-gateway/inference-gateway
   name: inference-gateway
   description: An open-source, cloud-native, high-performance gateway unifying multiple LLM providers,
     from local solutions like Ollama to major cloud providers such as OpenAI, Groq, Cohere, Anthropic,
     Cloudflare and DeepSeek.
-  stars_at_discovery: 211
+  stars_at_discovery: 217
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -1512,16 +1456,68 @@
   - tracing
   found_by:
   - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:gateway-api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: travisghansen/kubernetes-pfsense-controller
+  name: kubernetes-pfsense-controller
+  description: Integrate Kubernetes and pfSense
+  stars_at_discovery: 213
+  language: PHP
+  license_spdx: Apache-2.0
+  topics:
+  - api
+  - client
+  - cluster
+  - controller
+  - dns
+  - firewall
+  - haproxy
+  - haproxy-configuration
+  - ingress
+  - ingress-controller
+  - ingress-dns
+  - k8s
+  - kubernetes
+  - load-balancer
+  - metallb
+  - pfsense
+  - php
+  found_by:
+  - topic:ingress-controller archived:false fork:false stars:>=100
+  relevance_score: 6
+  matched_signals:
+  - topic:ingress-controller
+  - topic:load-balancer
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: haproxytech/helm-charts
+  name: helm-charts
+  description: Helm chart for HAProxy Kubernetes Ingress Controller
+  stars_at_discovery: 212
+  language: Shell
+  license_spdx: Apache-2.0
+  topics:
+  - haproxy
+  - helm-charts
+  - ingress-controller
+  - kubernetes
+  - kubernetes-cluster
+  found_by:
+  - topic:ingress-controller archived:false fork:false stars:>=100
+  relevance_score: 6
+  matched_signals:
+  - topic:ingress-controller
+  - metadata:ingress controller
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: Azumi67/Rathole_reverseTunnel
   name: Rathole_reverseTunnel
   description: An alternative reverse tunnel for FRP- Lightweight and fast - TCP | UDP | WS + TLS | Noise
     TLS- [10] Kharej Servers [1] Iran Server
-  stars_at_discovery: 208
+  stars_at_discovery: 207
   language: Go
   license_spdx: MIT
   topics:
@@ -1536,17 +1532,17 @@
   - wireguard
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 9
   matched_signals:
   - topic:reverse-proxy
   - topic:reverse-tunnel
   - metadata:reverse tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: unblocked/chissl
   name: chissl
   description: A tool to create HTTPS reverse tunnels
-  stars_at_discovery: 194
+  stars_at_discovery: 195
   language: Go
   license_spdx: MIT
   topics:
@@ -1559,16 +1555,16 @@
   - tunnel
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:reverse-tunnel
   - metadata:reverse tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: saarasio/enroute
   name: enroute
   description: EnRoute Ingress API Gateway - Kubernetes-native, Ingress API Gateway Powered using Envoy
-  stars_at_discovery: 192
+  stars_at_discovery: 189
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -1586,13 +1582,42 @@
   - ssl
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 9
   matched_signals:
   - topic:api-gateway
   - topic:ingress-controller
   - metadata:api gateway
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: SametKUM/klustr
+  name: klustr
+  description: A fast, native Kubernetes desktop client for multi-cluster management, troubleshooting,
+    and GitOps workflows. Open source under Apache 2.0.
+  stars_at_discovery: 181
+  language: TypeScript
+  license_spdx: Apache-2.0
+  topics:
+  - argocd
+  - cloud-native
+  - cncf
+  - desktop-app
+  - devops
+  - gateway-api
+  - golang
+  - helm
+  - k8s
+  - k9s
+  - kubernetes
+  - kubernetes-dashboard
+  - lens-alternative
+  - wails
+  found_by:
+  - topic:gateway-api archived:false fork:false stars:>=100
+  relevance_score: 3
+  matched_signals:
+  - topic:gateway-api
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: Azumi67/FRP_Reverse_Loadbalance
   name: FRP_Reverse_Loadbalance
   description: Create a reverse tunnel using FRP with load balancing between multiple servers (10) Kharej
@@ -1620,63 +1645,12 @@
   - v2rayng
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:reverse-tunnel
   - metadata:reverse tunnel
-- repo: EinStack/glide
-  name: glide
-  description: 🐦 A open blazing-fast simple model gateway for rapid development of production GenAI apps
-  stars_at_discovery: 160
-  language: Go
-  license_spdx: Apache-2.0
-  topics:
-  - ai
-  - gateway
-  - gateway-api
-  - genai
-  - generative-ai
-  - glide
-  - go
-  - llm
-  - llmops
-  - ml
-  - mlops
-  - router
-  found_by:
-  - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:gateway-api
-- repo: argoproj-labs/rollouts-plugin-trafficrouter-gatewayapi
-  name: rollouts-plugin-trafficrouter-gatewayapi
-  description: The Argo Rollouts plugin implementing the Kubernetes Gateway API specification for using
-    different traffic providers in progressive delivery scenarios
-  stars_at_discovery: 159
-  language: Go
-  license_spdx: Apache-2.0
-  topics:
-  - argo
-  - argo-rollouts
-  - argoproj
-  - argoproj-labs
-  - canary
-  - gateway-api
-  - gitops
-  - kubernetes
-  - progressive-delivery
-  found_by:
-  - topic:gateway-api archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
-  relevance_score: 6
-  matched_signals:
-  - topic:gateway-api
-  - metadata:gateway api
 - repo: alibaba/tengine-ingress
   name: tengine-ingress
   description: Tengine Ingress Controller for Kubernetes
@@ -1692,16 +1666,16 @@
   - tengine
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:ingress-controller
   - metadata:ingress controller
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: zlabjp/nghttpx-ingress-lb
   name: nghttpx-ingress-lb
   description: nghttpx ingress controller for Kubernetes
-  stars_at_discovery: 145
+  stars_at_discovery: 146
   language: Go
   license_spdx: NOASSERTION
   topics:
@@ -1719,13 +1693,13 @@
   - websocket
   found_by:
   - topic:ingress-controller archived:false fork:false stars:>=100
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 9
   matched_signals:
   - topic:gateway-api
   - topic:ingress-controller
   - metadata:ingress controller
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: Azumi67/Reverse_tls
   name: Reverse_tls
   description: 'Establish a TLS Reverse Tunnel between different servers and clients. IPV4 | IPV6 - Supports
@@ -1744,40 +1718,18 @@
   - wireguard
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:reverse-tunnel
   - metadata:reverse tunnel
-- repo: loopy-iri/RatholeEngine
-  name: RatholeEngine
-  description: The All-in-One Orchestrator for Rathole & Nginx
-  stars_at_discovery: 114
-  language: Shell
-  license_spdx: AGPL-3.0
-  topics:
-  - censorship-circumvention
-  - iran
-  - nginx
-  - proxy
-  - rathole
-  - reverse-tunnel
-  - tunnel
-  - vpn
-  found_by:
-  - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 3
-  matched_signals:
-  - topic:reverse-tunnel
 - repo: 0fuz/ssh-tunnel-manager
   name: ssh-tunnel-manager
   description: 'A lightweight macOS menu bar app for managing SSH port forwards. '
-  stars_at_discovery: 88
+  stars_at_discovery: 112
   language: Swift
-  license_spdx: null
+  license_spdx: MIT
   topics:
   - appkit
   - macos
@@ -1794,34 +1746,16 @@
   - swiftui
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-tunnel
-- repo: joonas-fi/holepunch-client
-  name: holepunch-client
-  description: Totally self-contained SSH reverse tunnel written in Go
-  stars_at_discovery: 82
-  language: Go
-  license_spdx: Apache-2.0
-  topics:
-  - reverse-tunnel
-  - ssh
-  - ssh-tunnel
-  found_by:
-  - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
+  discovered_at: '2026-11-01'
   triage_status: unreviewed
-  relevance_score: 6
-  matched_signals:
-  - topic:reverse-tunnel
-  - metadata:reverse tunnel
 - repo: ferro-labs/ferrotunnel
   name: ferrotunnel
   description: Secure, embedded, High Performance API-first tunneling with public URLs, acting as a lightweight
     ingress and HTTP/3 proxy focused on low-latency forwarding
-  stars_at_discovery: 80
+  stars_at_discovery: 83
   language: Rust
   license_spdx: Apache-2.0
   topics:
@@ -1847,16 +1781,34 @@
   - zero-trust
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:reverse-proxy
   - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: joonas-fi/holepunch-client
+  name: holepunch-client
+  description: Totally self-contained SSH reverse tunnel written in Go
+  stars_at_discovery: 82
+  language: Go
+  license_spdx: Apache-2.0
+  topics:
+  - reverse-tunnel
+  - ssh
+  - ssh-tunnel
+  found_by:
+  - topic:reverse-tunnel archived:false fork:false stars:>=50
+  relevance_score: 6
+  matched_signals:
+  - topic:reverse-tunnel
+  - metadata:reverse tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: Ptechgithub/wstunnel
   name: wstunnel
   description: Tunnel all your traffic over websocket protocol - Bypass firewalls/DPI - one-click-script
-  stars_at_discovery: 77
+  stars_at_discovery: 78
   language: Shell
   license_spdx: MIT
   topics:
@@ -1870,11 +1822,11 @@
   - wstunnel
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: mgrybyk/node-tunnel
   name: node-tunnel
   description: Reverse TCP tunnel for exposing services behind NAT through a public relay server.
@@ -1897,18 +1849,18 @@
   - tls
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: Azumi67/LocalTun_TCP
   name: LocalTun_TCP
   description: This implements a TCP tun between a client & server using a TUN interface. The client and
     server communicate by encapsulating network packets within TCP connections. Encapsulation & decapsulation
     is Simultaneous.You can establish the tunnel in DIRECT or REVERSE mode and then use the local private
     ips to be used in port forward or tunnels.
-  stars_at_discovery: 68
+  stars_at_discovery: 69
   language: Go
   license_spdx: Apache-2.0
   topics:
@@ -1922,15 +1874,15 @@
   - tun-device
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: CypherpunkArmory/holepunch
   name: holepunch
   description: Holepunch API
-  stars_at_discovery: 59
+  stars_at_discovery: 60
   language: Python
   license_spdx: AGPL-3.0
   topics:
@@ -1939,16 +1891,16 @@
   - reverse-tunnel
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 3
   matched_signals:
   - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
 - repo: prof7bit/udp-reverse-tunnel
   name: udp-reverse-tunnel
   description: Create an UDP-over-UDP reverse tunnel to make a VPN server behind (CG-)NAT accessible from
     the outside
-  stars_at_discovery: 56
+  stars_at_discovery: 57
   language: C
   license_spdx: null
   topics:
@@ -1963,9 +1915,28 @@
   - wireguard
   found_by:
   - topic:reverse-tunnel archived:false fork:false stars:>=50
-  discovered_at: '2026-09-09'
-  triage_status: unreviewed
   relevance_score: 6
   matched_signals:
   - topic:reverse-tunnel
   - metadata:reverse tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
+- repo: ceremcem/unlock-luks-partition
+  name: unlock-luks-partition
+  description: Unlock a LUKS partition via SSH
+  stars_at_discovery: 51
+  language: Shell
+  license_spdx: null
+  topics:
+  - boot
+  - luks
+  - luks-partition
+  - reverse-tunnel
+  - ssh
+  found_by:
+  - topic:reverse-tunnel archived:false fork:false stars:>=50
+  relevance_score: 3
+  matched_signals:
+  - topic:reverse-tunnel
+  discovered_at: '2026-11-01'
+  triage_status: unreviewed
